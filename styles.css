@@ -3,335 +3,75 @@
     src: url(/fonts/nba-spurs.ttf);
 }
 
+body {
+    background-image: linear-gradient(to right, #54585a, #616567, #6e7274, #7c7f81, #8a8d8f);
+    font-family: NBA;
+}
 
+div.title {
+    position: relative;
+    /* top: 20px; */
+    /* left: 30%; */
 
-@media (max-width: 1370px) {
-    body {
-        font-family: NBA;
-        background-color: black;
-        height: 120vh;
-    }
+    border: 5px solid #005bbb;
+    background-color: white;
+    padding: 20px;
 
-    div.title {
-        position: relative;
-        top: -10px;
-        /* border-radius: 25px; */
-        /* border: 5px solid #005bbb; */
-        background-color: #055bbb;
-        padding: 20px;
-        width: 100%;
-        height: 70px;
+    height: 70px;
+}
 
-        border-bottom: 0.5rem solid #fff;
-        right: 1%;
-    }
+h1 {
+    position: relative;
+    top: -10px;
+    text-align: center;
+    font-size: 30px;
+    color: #005bbb;
+}
 
-    h1 {
-        position: relative;
-        top: -10px;
-        text-align: center;
-        font-size: 30px;
-
-        color: #ffffff;
-        /* color: white; */
-    }
-
-    h2 {
-        position: relative;
-        top: -20px;
-        text-align: center;
-        font-size: 15px;
-        color: #ffffff;
-
-    }
-
-
-    button.input {
-        font-family: NBA;
-        background-color: transparent;
-        border: 5px solid #055bbb;
-        color: transparent;
-        background-color: #fff;
-        padding: 20px;
-        width: 20vh;
-        height: 20vh;
-        font-size: 20px;
-    }
-
-    button.input:hover {
-        font-family: NBA;
-        color: white;
-        border: 5px solid #666666;
-        background-color: grey;
-        padding: 20px;
-        width: 20vh;
-        height: 20vh;
-        font-size: 20px;
-    }
-
-    button.label {
-        font-family: NBA;
-        background-color: transparent;
-        border: 5px solid transparent;
-        background-color: transparent;
-        padding: 20px;
-        width: 20vh;
-        height: 15vh;
-        font-weight: 700;
-
-        color: #005bbb;
-
-        font-size: 20px;
-    }
-
-    button.guess {
-        font-family: NBA;
-        position: relative;
-        top: 30px;
-        right: 10px;
-        background-color: transparent;
-        border: 5px solid transparent;
-        background-color: transparent;
-        padding: 20px;
-        width: 20vh;
-        line-height: 80px;
-        box-sizing: border-box;
-        text-align: center;
-        height: 15vh;
-        font-weight: 700;
-        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-
-        color: #fff;
-
-        font-size: 70px;
-    }
-
-    button.guesses {
-        position: relative;
-        top: 120px;
-        font-family: NBA;
-        background-color: transparent;
-        border: 5px solid transparent;
-        background-color: transparent;
-        padding: 20px;
-        width: 20vh;
-        box-sizing: border-box;
-        text-align: left;
-        height: 15vh;
-        font-weight: 700;
-        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-
-        color: #fff;
-
-        font-size: 20px;
-    }
-
-    div.inputs {
-        position: relative;
-        margin: 0;
-        position: absolute;
-        top: 25%;
-        left: 22%;
-
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        /* left: 25%;
-    right: 25%; */
-        display: grid;
-        width: 50vw;
-        height: 50vh;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        width: 120px;
-        height: 120px;
-    }
+h2 {
+    position: relative;
+    top: -20px;
+    text-align: center;
+    font-size: 15px;
+    color: #666666;
 }
 
 
-@media (min-width: 1370px) {
-    body {
-        font-family: NBA;
-        background-color: black;
-        height: 120vh;
-    }
 
-    div.title {
-        position: relative;
-        top: -10px;
-        /* border-radius: 25px; */
-        /* border: 5px solid #005bbb; */
-        background-color: #055bbb;
-        padding: 20px;
-        width: 100%;
-        height: 70px;
+button.input {
+    font-family: NBA;
+    background-color: transparent;
+    border: 5px solid #005bbb;
+    background-color: white;
+    padding: 20px;
+    width: 20vh;
+    height: 20vh;
+    font-size: 20px;
+}
 
-        border-bottom: 0.5rem solid #fff;
-        right: 1%;
-    }
+button.label {
+    font-family: NBA;
+    background-color: transparent;
+    border: 5px solid transparent;
+    background-color: transparent;
+    padding: 20px;
+    width: 20vh;
+    height: 15vh;
+    color: white;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #005bbb;
+    font-size: 20px;
+}
 
-    h1 {
-        position: relative;
-        top: -10px;
-        text-align: center;
-        font-size: 30px;
-
-        color: #ffffff;
-        /* color: white; */
-    }
-
-    h2 {
-        position: relative;
-        top: -20px;
-        text-align: center;
-        font-size: 15px;
-        color: #ffffff;
-
-    }
-
-
-    button.input {
-        font-family: NBA;
-        background-color: transparent;
-        border: 5px solid #055bbb;
-        color: transparent;
-        background-color: #fff;
-        padding: 20px;
-        width: 20vh;
-        height: 20vh;
-        font-size: 20px;
-    }
-
-    button.input:hover {
-        font-family: NBA;
-        color: white;
-        border: 5px solid #666666;
-        background-color: grey;
-        padding: 20px;
-        width: 20vh;
-        height: 20vh;
-        font-size: 20px;
-    }
-
-    button.label {
-        font-family: NBA;
-        background-color: transparent;
-        border: 5px solid transparent;
-        background-color: transparent;
-        padding: 20px;
-        width: 20vh;
-        height: 15vh;
-        font-weight: 700;
-        text-shadow: -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -.5px .5px 0 #fff, 0.5px 0.5px 0 #fff;
-
-        color: #005bbb;
-
-        font-size: 20px;
-    }
-
-    button.guess {
-        font-family: NBA;
-        position: relative;
-        top: 30px;
-        right: 10px;
-        background-color: transparent;
-        border: 5px solid transparent;
-        background-color: transparent;
-        padding: 20px;
-        width: 20vh;
-        line-height: 80px;
-        box-sizing: border-box;
-        text-align: center;
-        height: 15vh;
-        font-weight: 700;
-        text-shadow: -2px -2px 0 #055bbb, 2px -2px 0 #055bbb, -2px 2px 0 #055bbb, 2px 2px 0 #055bbb;
-
-        color: #fff;
-
-        font-size: 70px;
-    }
-
-    button.guesses {
-        position: relative;
-        top: 120px;
-        font-family: NBA;
-        background-color: transparent;
-        border: 5px solid transparent;
-        background-color: transparent;
-        padding: 20px;
-        width: 20vh;
-        box-sizing: border-box;
-        text-align: left;
-        height: 15vh;
-        font-weight: 700;
-        text-shadow: -1px -1px 0 #055bbb, 1px -1px 0 #055bbb, -1px 1px 0 #055bbb, 1px 1px 0 #055bbb;
-        /* -webkit-text-stroke: 0.1px black; */
-        color: #fff;
-
-        font-size: 20px;
-    }
-
-    div.inputs {
-        position: relative;
-        margin: 0;
-        position: absolute;
-        top: 25%;
-        left: 30%;
-
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        /* left: 25%;
-    right: 25%; */
-        display: grid;
-        width: 50vw;
-        height: 50vh;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        width: 120px;
-        height: 120px;
-    }
-
-    button.sty {
-        font-family: NBA;
-        border-radius: 25px;
-        background: #000;
-        border: 3px solid #055bbb;
-        color: #fff;
-        padding: 2px;
-        width: 80px;
-        height: 30px;
-    }
-
-    button.sty1 {
-        font-family: NBA;
-        border-radius: 25px;
-        background: #fff;
-        border: 3px solid #055bbb;
-        color: #666666;
-        padding: 2px;
-        width: 80px;
-        height: 30px;
-    }
-
-    button.sty2 {
-        font-family: NBA;
-        border-radius: 25px;
-        background: #666666;
-        border: 3px solid #055bbb;
-        color: #fff;
-        padding: 2px;
-        width: 80px;
-        height: 30px;
-    }
-
-    button.sty:hover {
-        scale: 1.1;
-    }
-
-    button.sty1:hover {
-        scale: 1.1;
-    }
-
-    button.sty2:hover {
-        scale: 1.1;
-    }
+div.inputs {
+    position: relative;
+    top: 20px;
+    left: 25%;
+    display: grid;
+    width: 50vw;
+    height: 50vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: 120px;
+    height: 120px;
 }
