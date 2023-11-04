@@ -53,6 +53,36 @@
         </div>
 
     </div>
+    <!-- <style>
+        .alternate {
+            background-color: #666666;
+        }
+
+        .home {
+            background-color: #000;
+        }
+
+        .away {
+            background-color: #fff;
+        }
+    </style> -->
+    <script>
+        function home() {
+            document.body.style.backgroundColor = "#000000";
+        }
+        function away() {
+            document.body.style.backgroundColor = "#ffffff";
+
+        }
+        function alternate() {
+            document.body.style.backgroundColor = "#666666";
+
+        }
+
+    </script>
+    <button class='sty' onclick="home()">Home</button>
+    <button class='sty1' onclick="away()">Away</button>
+    <button class='sty2' onclick="alternate()">Alternate</button>
 </body>
 
 </html>

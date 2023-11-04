@@ -99,6 +99,7 @@
         text-align: center;
         height: 15vh;
         font-weight: 700;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
         color: #fff;
 
@@ -118,6 +119,7 @@
         text-align: left;
         height: 15vh;
         font-weight: 700;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
         color: #fff;
 
@@ -219,6 +221,7 @@
         width: 20vh;
         height: 15vh;
         font-weight: 700;
+        text-shadow: -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -.5px .5px 0 #fff, 0.5px 0.5px 0 #fff;
 
         color: #005bbb;
 
@@ -240,6 +243,7 @@
         text-align: center;
         height: 15vh;
         font-weight: 700;
+        text-shadow: -2px -2px 0 #055bbb, 2px -2px 0 #055bbb, -2px 2px 0 #055bbb, 2px 2px 0 #055bbb;
 
         color: #fff;
 
@@ -259,7 +263,8 @@
         text-align: left;
         height: 15vh;
         font-weight: 700;
-
+        text-shadow: -1px -1px 0 #055bbb, 1px -1px 0 #055bbb, -1px 1px 0 #055bbb, 1px 1px 0 #055bbb;
+        /* -webkit-text-stroke: 0.1px black; */
         color: #fff;
 
         font-size: 20px;
@@ -283,5 +288,50 @@
         grid-template-rows: repeat(5, 1fr);
         width: 120px;
         height: 120px;
+    }
+
+    button.sty {
+        font-family: NBA;
+        border-radius: 25px;
+        background: #000;
+        border: 3px solid #055bbb;
+        color: #fff;
+        padding: 2px;
+        width: 80px;
+        height: 30px;
+    }
+
+    button.sty1 {
+        font-family: NBA;
+        border-radius: 25px;
+        background: #fff;
+        border: 3px solid #055bbb;
+        color: #666666;
+        padding: 2px;
+        width: 80px;
+        height: 30px;
+    }
+
+    button.sty2 {
+        font-family: NBA;
+        border-radius: 25px;
+        background: #666666;
+        border: 3px solid #055bbb;
+        color: #fff;
+        padding: 2px;
+        width: 80px;
+        height: 30px;
+    }
+
+    button.sty:hover {
+        scale: 1.1;
+    }
+
+    button.sty1:hover {
+        scale: 1.1;
+    }
+
+    button.sty2:hover {
+        scale: 1.1;
     }
 }
