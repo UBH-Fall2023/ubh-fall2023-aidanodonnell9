@@ -1,6 +1,11 @@
+@font-face {
+    font-family: NBA;
+    src: url(/fonts/nba-spurs.ttf);
+  }
+
 body {
     background-image: linear-gradient(to right, #54585a, #616567, #6e7274, #7c7f81, #8a8d8f);
-    font-family: monospace;
+    font-family: NBA;
 }
 
 div.title {
@@ -34,6 +39,7 @@ h2 {
 
 
 button.input {
+    font-family: NBA;
     background-color: transparent;
     border: 5px solid #005bbb;
     background-color: white;
@@ -44,6 +50,7 @@ button.input {
 }
 
 button.label {
+    font-family: NBA;
     background-color: transparent;
     border: 5px solid transparent;
     background-color: transparent;

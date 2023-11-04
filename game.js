@@ -38952,3 +38952,5 @@ let playerDB = {
 };
 
 console.log(playerDB["'Muggsy Bogues', 2378"][0]);
+
+function show_search() {}
