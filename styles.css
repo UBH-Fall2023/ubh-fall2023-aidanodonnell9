@@ -61,7 +61,7 @@
     button.input:hover {
         font-family: NBA;
         color: white;
-        border: 5px solid #055bbb;
+        border: 5px solid #666666;
         background-color: grey;
         padding: 20px;
         width: 20vh;
@@ -202,7 +202,7 @@
     button.input:hover {
         font-family: NBA;
         color: white;
-        border: 5px solid #055bbb;
+        border: 5px solid #666666;
         background-color: grey;
         padding: 20px;
         width: 20vh;
