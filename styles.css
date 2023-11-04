@@ -1,0 +1,70 @@
+body {
+    background-image: linear-gradient(to right, #54585a, #616567, #6e7274, #7c7f81, #8a8d8f);
+    font-family: monospace;
+}
+
+div.title {
+    position: relative;
+    /* top: 20px; */
+    /* left: 30%; */
+
+    border: 5px solid #005bbb;
+    background-color: white;
+    padding: 20px;
+
+    height: 70px;
+}
+
+h1 {
+    position: relative;
+    top: -10px;
+    text-align: center;
+    font-size: 30px;
+    color: #005bbb;
+}
+
+h2 {
+    position: relative;
+    top: -20px;
+    text-align: center;
+    font-size: 15px;
+    color: #666666;
+}
+
+
+
+button.input {
+    background-color: transparent;
+    border: 5px solid #005bbb;
+    background-color: white;
+    padding: 20px;
+    width: 20vh;
+    height: 20vh;
+    font-size: 20px;
+}
+
+button.label {
+    background-color: transparent;
+    border: 5px solid transparent;
+    background-color: transparent;
+    padding: 20px;
+    width: 20vh;
+    height: 15vh;
+    color: white;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #005bbb;
+    font-size: 20px;
+}
+
+div.inputs {
+    position: relative;
+    top: 20px;
+    left: 25%;
+    display: grid;
+    width: 50vw;
+    height: 50vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: 120px;
+    height: 120px;
+}
