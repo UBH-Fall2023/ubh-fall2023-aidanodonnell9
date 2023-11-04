@@ -563,7 +563,7 @@ let playerDB = {
         "1996",
         "1995",
       ],
-      ["MIA", "POR", "TOT", "DEN", "CHO", "DAL", "HOU", "ORL", "WAS", "WAS"],
+      ["MIA", "POR", "TOT", "DEN", "CHO", "DAL", "HOU", "ORL", "WAS"],
     ],
   ],
   "'Shaquille O'Neal', 2751": [
@@ -1830,19 +1830,7 @@ let playerDB = {
         "1990",
         "1989",
       ],
-      [
-        "HOU",
-        "TOT",
-        "ORL",
-        "TOR",
-        "MIN",
-        "MIA",
-        "WAS",
-        "POR",
-        "WAS",
-        "SAS",
-        "NYK",
-      ],
+      ["HOU", "TOT", "ORL", "TOR", "MIN", "MIA", "WAS", "POR", "SAS", "NYK"],
     ],
   ],
   "'Horace Grant', 2361": [
@@ -2818,7 +2806,7 @@ let playerDB = {
         "1998",
         "1997",
       ],
-      ["DET", "CLE", "TOT", "CHI", "ORL", "WAS", "WAS"],
+      ["DET", "CLE", "TOT", "CHI", "ORL", "WAS"],
     ],
   ],
   "'Erick Dampier', 2984": [
@@ -3387,7 +3375,7 @@ let playerDB = {
         "1970",
         "1969",
       ],
-      ["HOU", "WAS", "CAP", "WAS"],
+      ["HOU", "WAS", "CAP"],
     ],
   ],
   "'Paul Silas', 834": [
@@ -4031,7 +4019,7 @@ let playerDB = {
         "1995",
         "1994",
       ],
-      ["GSW", "TOT", "PHI", "DET", "SAC", "WAS", "WAS"],
+      ["GSW", "TOT", "PHI", "DET", "SAC", "WAS"],
     ],
   ],
   "'P.J. Brown', 2815": [
@@ -8911,7 +8899,7 @@ let playerDB = {
         "1995",
         "1994",
       ],
-      ["GSW", "UTA", "DEN", "BOS", "WAS", "WAS"],
+      ["GSW", "UTA", "DEN", "BOS", "WAS"],
     ],
   ],
   "'Ervin Johnson', 2791": [
@@ -10331,7 +10319,7 @@ let playerDB = {
         "1970",
         "1969",
       ],
-      ["WAS", "CAP", "WAS"],
+      ["WAS", "CAP"],
     ],
   ],
   "'Earl Monroe', 949": [
@@ -12141,7 +12129,7 @@ let playerDB = {
         "1994",
         "1993",
       ],
-      ["POR", "LAL", "TOR", "TOT", "DEN", "WAS", "WAS", "HOU"],
+      ["POR", "LAL", "TOR", "TOT", "DEN", "WAS", "HOU"],
     ],
   ],
   "'Randy Brown', 2678": [
@@ -15144,7 +15132,7 @@ let playerDB = {
         "1995",
         "1994",
       ],
-      ["WAS", "TOT", "DEN", "ORL", "WAS", "SAS"],
+      ["WAS", "TOT", "DEN", "ORL", "SAS"],
     ],
   ],
   "'Corie Blount', 2783": [
@@ -15636,7 +15624,7 @@ let playerDB = {
         "1990",
         "1989",
       ],
-      ["PHI", "WAS", "WAS", "POR"],
+      ["PHI", "WAS", "POR"],
     ],
   ],
   "'Joe Wolf', 2365": [
@@ -18977,7 +18965,7 @@ let playerDB = {
         "1991",
         "1990",
       ],
-      ["GSW", "WAS", "WAS", "DAL", "TOT", "UTA", "DEN", "PHO"],
+      ["GSW", "WAS", "DAL", "TOT", "UTA", "DEN", "PHO"],
     ],
   ],
   "'Blue Edwards', 2483": [
@@ -20051,7 +20039,7 @@ let playerDB = {
         "1974",
         "1973",
       ],
-      ["WAS", "DET", "TOT", "BRK", "CAP", "WAS"],
+      ["WAS", "DET", "TOT", "BRK", "CAP"],
     ],
   ],
   "'Larry Kenon', 1520": [
@@ -20198,7 +20186,7 @@ let playerDB = {
         "1973",
         "1972",
       ],
-      ["GSW", "TOT", "WAS", "IND", "CAP", "WAS"],
+      ["GSW", "TOT", "WAS", "IND", "CAP"],
     ],
   ],
   "'Sidney Wicks', 1403": [
@@ -22854,7 +22842,7 @@ let playerDB = {
         "1970",
         "1969",
       ],
-      ["WAS", "CAP", "WAS", "TOT", "NYK"],
+      ["WAS", "CAP", "TOT", "NYK"],
     ],
   ],
   "'Otto Moore', 1131": [
@@ -24723,7 +24711,7 @@ let playerDB = {
   "'Mitchell Butler', 2813": [
     [
       ["2004", "2002", "1999", "1998", "1997", "1996", "1995", "1994"],
-      ["WAS", "POR", "CLE", "WAS"],
+      ["WAS", "POR", "CLE"],
     ],
   ],
   "'Antonio Harvey', 2769": [
@@ -26759,7 +26747,7 @@ let playerDB = {
         "1993",
         "1993",
       ],
-      ["WAS", "WAS", "DAL", "TOT", "ORL", "NOP", "BOS"],
+      ["WAS", "DAL", "TOT", "ORL", "NOP", "BOS"],
     ],
   ],
   "'Rex Walters', 2818": [
@@ -26801,7 +26789,7 @@ let playerDB = {
   "'Ledell Eackles', 2443": [
     [
       ["1998", "1996", "1995", "1992", "1991", "1990", "1989"],
-      ["WAS", "WAS", "MIA"],
+      ["WAS", "MIA"],
     ],
   ],
   "'David Wood', 2420": [
@@ -38962,3 +38950,5 @@ let playerDB = {
     ],
   ],
 };
+
+console.log(playerDB["'Muggsy Bogues', 2378"][0]);

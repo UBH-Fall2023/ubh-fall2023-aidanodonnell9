@@ -5,6 +5,7 @@ def update_teams(team: str):
     old_to_new: dict[str:str] = {
         "BAL": "WAS",
         "CHZ": "WAS",
+        "WSB": "WAS",
         "PHW": "GSW",
         "SFW": "GSW",
         "TRI": "ATL",

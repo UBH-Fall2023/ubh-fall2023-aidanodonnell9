@@ -1,0 +1,12 @@
+{
+  "name": "intro-calculator",
+  "version": "1.0.0",
+  "description": "Welcome new members to UB's MakeOpenSource club! This project is to help you get accustomed to the basics of Frontend development involving HTML, CSS, and TypeScript.",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
