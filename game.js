@@ -43892,7 +43892,6 @@ function randombutton() {
   for (let i of Object.keys(team_names)) {
     acc.push(i);
   }
-  console.log(acc);
   gen_teams(acc);
   close_search1();
   reset_game();
@@ -43954,22 +43953,3 @@ function restart_game() {
   reset_game();
 }
 
-// for (let [key, value] of Object.entries(playerDB)) {
-//   let key_array = key.split(",");
-//   let player_seasons = value[0][0];
-//   let player_teams = value[0][1];
-//   let last_year_played = Math.max.apply(Math, player_seasons);
-//   let first_year_played = Math.min.apply(Math, player_seasons);
-//   let career = `${first_year_played - 1} - ${last_year_played - 1}`;
-//   let player_name = key_array[0];
-//   let player_id = parseInt(key_array[1]);
-
-//   let code = `
-//                 <li>
-//                     <h5>${player_name}</h5>
-//                     <h6>(${career})</h6>
-//                     <button onclick="analyze_selection(${player_name}, ${player_id})">Select</button>
-//                 </li>
-//     `;
-//   console.log(`${player_name}: ['${career}', ${player_id}],`);
-// }
