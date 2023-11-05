@@ -43825,10 +43825,10 @@ let tntotc = {
   "Waterloo Hawks": "WAT",
 };
 
+let guesses = 9
 function analyze_selection(name, id) {
   console.log(name);
   console.log(id);
-  let guesses = document.getElementById("tn9").innerHTML;
   let player_key = `'${name}', ${id}`;
   let player_teams = playerDB[player_key][0][1];
   let first_team = team_names[document.getElementById(first_team_id).value];
@@ -43836,12 +43836,42 @@ function analyze_selection(name, id) {
   if (player_teams.includes(first_team) && player_teams.includes(second_team)) {
     close_search();
     document.getElementById(selected_button_id).value = "Correct!";
-    let guesses = (parseInt(guesses) - 1).toString;
   } else {
     close_search();
-    document.getElementById("tn9").innerHTML = parseInt(guesses) - 1;
-    console.log(document.getElementById("tn9").innerHTML);
   }
+  guesses -= 1;
+
+  document.getElementById("tn9").innerHTML = guesses;
+  console.log(document.getElementById("tn9").innerHTML);
+}
+
+
+let teams = [];
+let count = 0
+function teamlist(teamcode) {
+  if (!teams.includes(tctotn[teamcode])) {
+    teams.push(tctotn[teamcode]);
+  }
+  console.log(teams);
+  if (teams.length == 6) {
+    close_search1()
+    gen_teams(teams)
+  }
+}
+
+function gen_teams(teamlist) {
+  for (let i = teamlist.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [teamlist[i], teamlist[j]] = [teamlist[j], teamlist[i]];
+  }
+  document.getElementById("tn1").innerHTML = teamlist[0];
+  document.getElementById("tn2").innerHTML = teamlist[1];
+  document.getElementById("tn3").innerHTML = teamlist[2];
+  document.getElementById("tn4").innerHTML = teamlist[3];
+  document.getElementById("tn5").innerHTML = teamlist[4];
+  document.getElementById("tn6").innerHTML = teamlist[5];
+  teams = [];
+  count = 0;
 }
 
 // for (let [key, value] of Object.entries(playerDB)) {
