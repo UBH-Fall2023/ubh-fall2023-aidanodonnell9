@@ -43669,7 +43669,8 @@ function open_search(element_id, first_team_search, second_team_search) {
                         <button onclick="analyze_selection('${data}', ${player_names[data][1]})">Select</button>
                     </li>
                     `
-      );
+      )
+      .join("");
     document.querySelector(".options").innerHTML = arr;
   });
 }
