@@ -43839,7 +43839,9 @@ function analyze_selection(name, id) {
   } else {
     close_search();
   }
-  guesses -= 1;
+  if (guesses >= 0) {
+    guesses -= 1;
+  }
 
   document.getElementById("tn9").innerHTML = guesses;
   console.log(document.getElementById("tn9").innerHTML);
