@@ -43648,6 +43648,12 @@ let search_input = document.querySelector("input");
 let selected_button_id = "";
 let first_team_id = "";
 let second_team_id = "";
+let unlimited_guesses = false;
+
+function unlimited_mode() {
+  unlimited_guesses = true;
+  document.getElementById("tn9").innerHTML = "∞";
+}
 
 function open_search(element_id, first_team_search, second_team_search) {
   selected_button_id = element_id;
@@ -43687,75 +43693,75 @@ function pickTeams() {
 }
 
 let tctotn = {
-  'ATL': "Atlanta Hawks",
-  'BOS': "Boston Celtics",
-  'BRK': "Brooklyn Nets",
-  'CHO': "Charlotte Hornets",
-  'CHI': "Chicago Bulls",
-  'CLE': "Cleveland Cavaliers",
-  'DAL': "Dallas Mavericks",
-  'DEN': "Denver Nuggets",
-  'DET': "Detroit Pistons",
-  'GSW': "Golden State Warriors",
-  'HOU': "Houston Rockets",
-  'IND': "Indiana Pacers",
-  'LAC': "Los Angeles Clippers",
-  'LAL': "Los Angeles Lakers",
-  'MEM': "Memphis Grizzlies",
-  'MIA': "Miami Heat",
-  'MIL': "Milwaukee Bucks",
-  'MIN': "Minnesota Timberwolves",
-  'NOP': "New Orleans Pelicans",
-  'NYK': "New York Knicks",
-  'OKC': "Oklahoma City Thunder",
-  'ORL': "Orlando Magic",
-  'PHI': "Philadelphia 76ers",
-  'PHO': "Phoenix Suns",
-  'POR': "Portland Trail Blazers",
-  'SAC': "Sacramento Kings",
-  'SAS': "San Antonio Spurs",
-  'TOR': "Toronto Raptors",
-  'UTA': "Utah Jazz",
-  'WAS': "Washington Wizards",
-  'NA': "League Average",
-  'CHA': "Charlotte Bobcats",
-  'NOH': "New Orleans Hornets",
-  'NJN': "New Jersey Nets",
-  'SEA': "Seattle SuperSonics",
-  'NOK': "New Orleans/Oklahoma City Hornets",
-  'CHH': "Charlotte Hornets",
-  'VAN': "Vancouver Grizzlies",
-  'WSB': "Washington Bullets",
-  'KCK': "Kansas City Kings",
-  'SDC': "San Diego Clippers",
-  'NOJ': "New Orleans Jazz",
-  'BUF': "Buffalo Braves",
-  'NYN': "New York Nets",
-  'KCO': "Kansas City-Omaha Kings",
-  'CAP': "Capital Bullets",
-  'BAL': "Baltimore Bullets",
-  'CIN': "Cincinnati Royals",
-  'SDR': "San Diego Rockets",
-  'SFW': "San Francisco Warriors",
-  'STL': "St. Louis Hawks",
-  'CHZ': "Chicago Zephyrs",
-  'SYR': "Syracuse Nationals",
-  'CHP': "Chicago Packers",
-  'PHW': "Philadelphia Warriors",
-  'MNL': "Minneapolis Lakers",
-  'FTW': "Fort Wayne Pistons",
-  'ROC': "Rochester Royals",
-  'BLB': "Baltimore Bullets",
-  'MLH': "Milwaukee Hawks",
-  'INO': "Indianapolis Olympians",
-  'TRI': "Tri-Cities Blackhawks",
-  'WSC': "Washington Capitols",
-  'AND': "Anderson Packers",
-  'CHS': "Chicago Stags",
-  'DNN': "Denver Nuggets",
-  'SHE': "Sheboygan Red Skins",
-  'STB': "St. Louis Bombers",
-  'WAT': "Waterloo Hawks",
+  ATL: "Atlanta Hawks",
+  BOS: "Boston Celtics",
+  BRK: "Brooklyn Nets",
+  CHO: "Charlotte Hornets",
+  CHI: "Chicago Bulls",
+  CLE: "Cleveland Cavaliers",
+  DAL: "Dallas Mavericks",
+  DEN: "Denver Nuggets",
+  DET: "Detroit Pistons",
+  GSW: "Golden State Warriors",
+  HOU: "Houston Rockets",
+  IND: "Indiana Pacers",
+  LAC: "Los Angeles Clippers",
+  LAL: "Los Angeles Lakers",
+  MEM: "Memphis Grizzlies",
+  MIA: "Miami Heat",
+  MIL: "Milwaukee Bucks",
+  MIN: "Minnesota Timberwolves",
+  NOP: "New Orleans Pelicans",
+  NYK: "New York Knicks",
+  OKC: "Oklahoma City Thunder",
+  ORL: "Orlando Magic",
+  PHI: "Philadelphia 76ers",
+  PHO: "Phoenix Suns",
+  POR: "Portland Trail Blazers",
+  SAC: "Sacramento Kings",
+  SAS: "San Antonio Spurs",
+  TOR: "Toronto Raptors",
+  UTA: "Utah Jazz",
+  WAS: "Washington Wizards",
+  NA: "League Average",
+  CHA: "Charlotte Bobcats",
+  NOH: "New Orleans Hornets",
+  NJN: "New Jersey Nets",
+  SEA: "Seattle SuperSonics",
+  NOK: "New Orleans/Oklahoma City Hornets",
+  CHH: "Charlotte Hornets",
+  VAN: "Vancouver Grizzlies",
+  WSB: "Washington Bullets",
+  KCK: "Kansas City Kings",
+  SDC: "San Diego Clippers",
+  NOJ: "New Orleans Jazz",
+  BUF: "Buffalo Braves",
+  NYN: "New York Nets",
+  KCO: "Kansas City-Omaha Kings",
+  CAP: "Capital Bullets",
+  BAL: "Baltimore Bullets",
+  CIN: "Cincinnati Royals",
+  SDR: "San Diego Rockets",
+  SFW: "San Francisco Warriors",
+  STL: "St. Louis Hawks",
+  CHZ: "Chicago Zephyrs",
+  SYR: "Syracuse Nationals",
+  CHP: "Chicago Packers",
+  PHW: "Philadelphia Warriors",
+  MNL: "Minneapolis Lakers",
+  FTW: "Fort Wayne Pistons",
+  ROC: "Rochester Royals",
+  BLB: "Baltimore Bullets",
+  MLH: "Milwaukee Hawks",
+  INO: "Indianapolis Olympians",
+  TRI: "Tri-Cities Blackhawks",
+  WSC: "Washington Capitols",
+  AND: "Anderson Packers",
+  CHS: "Chicago Stags",
+  DNN: "Denver Nuggets",
+  SHE: "Sheboygan Red Skins",
+  STB: "St. Louis Bombers",
+  WAT: "Waterloo Hawks",
 };
 let tntotc = {
   "Atlanta Hawks": "ATL",
@@ -43850,7 +43856,8 @@ function analyze_selection(name, id) {
     } else {
       close_search();
     }
-    if (guesses > 0) {
+
+    if (guesses > 0 && unlimited_guesses == false) {
       guesses -= 1;
     }
 
@@ -43868,7 +43875,9 @@ function analyze_selection(name, id) {
       document.querySelector(".gameOver").style.visibility = "visible";
     }
 
-    document.getElementById("tn9").innerHTML = guesses;
+    if (unlimited_guesses == false) {
+      document.getElementById("tn9").innerHTML = guesses;
+    }
   }
 }
 
@@ -43893,15 +43902,15 @@ function randombutton() {
   acc = [];
   for (let i of Object.keys(team_names)) {
     acc.push(i);
-    tl.push(tntotc[i])
+    tl.push(tntotc[i]);
   }
-  console.log(tl)
+  console.log(tl);
   gen_teams(acc);
   close_search1();
   reset_game();
 }
 function gen_teams(teamlist) {
-  console.log(teamlist)
+  console.log(teamlist);
   for (let i = teamlist.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [teamlist[i], teamlist[j]] = [teamlist[j], teamlist[i]];
@@ -43935,6 +43944,7 @@ function gen_teams(teamlist) {
 }
 
 function reset_game() {
+  unlimited_guesses = false;
   player_guessed = [];
   document.getElementById("topleft").innerHTML = "Click to Enter Player";
   document.getElementById("topleft").style.backgroundColor = "transparent";
@@ -43963,4 +43973,3 @@ function restart_game() {
   guesses = 9;
   reset_game();
 }
-

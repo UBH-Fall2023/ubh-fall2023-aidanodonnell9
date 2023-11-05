@@ -316,6 +316,20 @@
         left: 6%;
     }
 
+    button.unlimited{
+        font-family: NBA;
+        color: #005bbb;
+        border-radius: 25px;
+        background: #fff;
+        font: 100px;
+        width: 100px;
+        height: 30px;
+        border: 3px solid #055bbb;
+        position: absolute;
+        top: 50%;
+        left: 6%;
+    }
+
     button.t {
         background: transparent;
         width: 0px;
