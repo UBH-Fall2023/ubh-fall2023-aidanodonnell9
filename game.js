@@ -43877,7 +43877,7 @@ function teamlist(teamcode) {
     teams.push(tctotn[teamcode]);
   }
   console.log(teams);
-  document.getElementById(teamcode).style.backgroundColor = "#666666";
+  document.getElementById(teamcode).style.backgroundColor = "grey";
 
   if (teams.length == 6) {
     close_search1();
