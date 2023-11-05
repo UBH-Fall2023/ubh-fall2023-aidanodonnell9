@@ -287,11 +287,20 @@
         color: #fff;
         border-color: transparent;
         background-color: #666666;
-        position: absolute;
+
         font-size: 50px;
+        /* /* border-radius: 25px; */
+        background: #666666;
+        /* border: 3px solid #055bbb; */
+        margin: 0;
         width: 840px;
-        top: 116px;
-        left: 22.65%;
+        position: absolute;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, 50%);
+        transform: translate(-50%, -390%);
         z-index: 9;
     }
 
