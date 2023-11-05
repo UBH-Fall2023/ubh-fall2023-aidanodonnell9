@@ -43827,6 +43827,7 @@ let tntotc = {
 };
 
 let guesses = 9;
+let correct = 0;
 function analyze_selection(name, id) {
   let guesses = document.getElementById("tn9").innerHTML;
   let player_key = `'${name}', ${id}`;
@@ -43839,6 +43840,7 @@ function analyze_selection(name, id) {
     document.getElementById("tn9").innerHTML = parseInt(guesses) - 1;
     document.getElementById(selected_button_id).innerHTML = "Correct!";
     document.getElementById(selected_button_id).style.backgroundColor = "green";
+    correct += 1;
   } else {
     close_search();
   }
@@ -43847,6 +43849,10 @@ function analyze_selection(name, id) {
   }
 
   if (guesses == 0) {
+    if (correct == 9) {
+      document.querySelector(".gameOver").innerHTML = "You Win!";
+      document.querySelector(".gameOver").style.visibility = "visible";
+    }
     document.querySelector(".gameOver").style.visibility = "visible";
   }
 
