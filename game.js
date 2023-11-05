@@ -43670,7 +43670,6 @@ function open_search(element_id, first_team_search, second_team_search) {
                     </li>
                     `
       );
-    console.log(arr);
     document.querySelector(".options").innerHTML = arr;
   });
 }
@@ -43837,11 +43836,9 @@ function analyze_selection(name, id) {
     team_names[document.getElementById(second_team_id).innerHTML];
   if (player_teams.includes(first_team) && player_teams.includes(second_team)) {
     close_search();
-    document.getElementById("tn9").innerHTML = parseInt(guesses_value) - 1;
     document.getElementById(selected_button_id).innerHTML = name;
     document.getElementById(selected_button_id).style.backgroundColor = "green";
     correct += 1;
-    console.log(correct);
   } else {
     close_search();
   }
@@ -43864,19 +43861,16 @@ function analyze_selection(name, id) {
   }
 
   document.getElementById("tn9").innerHTML = guesses;
-  console.log(document.getElementById("tn9").innerHTML);
 }
 
 let teams = [];
-let tl = []
+let tl = [];
 let count = 0;
 function teamlist(teamcode) {
-
   if (!teams.includes(tctotn[teamcode])) {
-    tl.push(teamcode)
+    tl.push(teamcode);
     teams.push(tctotn[teamcode]);
   }
-  console.log(teams);
   document.getElementById(teamcode).style.backgroundColor = "grey";
 
   if (teams.length == 6) {
@@ -43908,16 +43902,15 @@ function gen_teams(teamlist) {
   count = 0;
   guesses = 9;
   document.getElementById("tn9").innerHTML = guesses;
-  document.getElementById('topleft').style.backgroundColor = "white";
-  document.getElementById('topmiddle').style.backgroundColor = "white";
-  document.getElementById('topright').style.backgroundColor = "white";
-  document.getElementById('middleleft').style.backgroundColor = "white";
-  document.getElementById('middlemiddle').style.backgroundColor = "white";
-  document.getElementById('bottomright').style.backgroundColor = "white";
-  document.getElementById('bottomleft').style.backgroundColor = "white";
-  document.getElementById('bottommiddle').style.backgroundColor = "white";
-  document.getElementById('middleright').style.backgroundColor = "white";
-
+  document.getElementById("topleft").style.backgroundColor = "white";
+  document.getElementById("topmiddle").style.backgroundColor = "white";
+  document.getElementById("topright").style.backgroundColor = "white";
+  document.getElementById("middleleft").style.backgroundColor = "white";
+  document.getElementById("middlemiddle").style.backgroundColor = "white";
+  document.getElementById("bottomright").style.backgroundColor = "white";
+  document.getElementById("bottomleft").style.backgroundColor = "white";
+  document.getElementById("bottommiddle").style.backgroundColor = "white";
+  document.getElementById("middleright").style.backgroundColor = "white";
 }
 
 function reset_game() {
