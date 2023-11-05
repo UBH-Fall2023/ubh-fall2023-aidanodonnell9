@@ -363,6 +363,9 @@
     }
 
     button.Exit {
+        cursor: pointer;
+        border: none;
+        outline: none;
         z-index: 6;
         color: white;
         position: relative;
@@ -373,6 +376,13 @@
         border-radius: 25px;
         height: 40px;
         width: 40px;
+
+    }
+
+    button.Exit:hover{
+        border: 1px solid black;
+        color: black;
+        background: white;
 
     }
 
