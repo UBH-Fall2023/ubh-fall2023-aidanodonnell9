@@ -43611,9 +43611,48 @@ let player_names = {
   "Whitey Von Nieda": [["1949 - 1949"], [416]],
 };
 
-let search_input = document.querySelector("input");
+let team_names = {
+  "Atlanta Hawks": "ATL",
+  "Boston Celtics": "BOS",
+  "Brooklyn Nets": "BRK",
+  "Charlotte Hornets": "CHO",
+  "Chicago Bulls": "CHI",
+  "Cleveland Cavaliers": "CLE",
+  "Dallas Mavericks": "DAL",
+  "Denver Nuggets": "DEN",
+  "Detroit Pistons": "DET",
+  "Golden State Warriors": "GSW",
+  "Houston Rockets": "HOU",
+  "Indiana Pacers": "IND",
+  "Los Angeles Clippers": "LAC",
+  "Los Angeles Lakers": "LAL",
+  "Memphis Grizzlies": "MEM",
+  "Miami Heat": "MIA",
+  "Milwaukee Bucks": "MIL",
+  "Minnesota Timberwolves": "MIN",
+  "New Orleans Pelicans": "NOP",
+  "New York Knicks": "NYK",
+  "Oklahoma City Thunder": "OKC",
+  "Orlando Magic": "ORL",
+  "Philadelphia 76ers": "PHI",
+  "Phoenix Suns": "PHO",
+  "Portland Trail Blazers": "POR",
+  "Sacramento Kings": "SAC",
+  "San Antonio Spurs": "SAS",
+  "Toronto Raptors": "TOR",
+  "Utah Jazz": "UTA",
+  "Washington Wizards": "WAS",
+};
 
-function open_search() {
+let search_input = document.querySelector("input");
+let selected_button_id = "";
+let first_team_id = "";
+let second_team_id = "";
+
+function open_search(element_id, first_team_search, second_team_search) {
+  selected_button = element_id;
+  first_team_id = first_team_search;
+  second_team_id = second_team_search;
   document.querySelector(".wrapper").style.visibility = "visible";
   search_input = document.querySelector("input");
   search_input.addEventListener("keyup", () => {
@@ -43641,45 +43680,169 @@ function close_search() {
 }
 function close_search1() {
   document.querySelector(".wrapper2").style.visibility = "hidden";
-
 }
 function pickTeams() {
   document.querySelector(".wrapper2").style.visibility = "visible";
 }
 
+let tctotn = {
+  ATL: "Atlanta Hawks",
+  BOS: "Boston Celtics",
+  BRK: "Brooklyn Nets",
+  CHO: "Charlotte Hornets",
+  CHI: "Chicago Bulls",
+  CLE: "Cleveland Cavaliers",
+  DAL: "Dallas Mavericks",
+  DEN: "Denver Nuggets",
+  DET: "Detroit Pistons",
+  GSW: "Golden State Warriors",
+  HOU: "Houston Rockets",
+  IND: "Indiana Pacers",
+  LAC: "Los Angeles Clippers",
+  LAL: "Los Angeles Lakers",
+  MEM: "Memphis Grizzlies",
+  MIA: "Miami Heat",
+  MIL: "Milwaukee Bucks",
+  MIN: "Minnesota Timberwolves",
+  NOP: "New Orleans Pelicans",
+  NYK: "New York Knicks",
+  OKC: "Oklahoma City Thunder",
+  ORL: "Orlando Magic",
+  PHI: "Philadelphia 76ers",
+  PHO: "Phoenix Suns",
+  POR: "Portland Trail Blazers",
+  SAC: "Sacramento Kings",
+  SAS: "San Antonio Spurs",
+  TOR: "Toronto Raptors",
+  UTA: "Utah Jazz",
+  WAS: "Washington Wizards",
+  NA: "League Average",
+  CHA: "Charlotte Bobcats",
+  NOH: "New Orleans Hornets",
+  NJN: "New Jersey Nets",
+  SEA: "Seattle SuperSonics",
+  NOK: "New Orleans/Oklahoma City Hornets",
+  CHH: "Charlotte Hornets",
+  VAN: "Vancouver Grizzlies",
+  WSB: "Washington Bullets",
+  KCK: "Kansas City Kings",
+  SDC: "San Diego Clippers",
+  NOJ: "New Orleans Jazz",
+  BUF: "Buffalo Braves",
+  NYN: "New York Nets",
+  KCO: "Kansas City-Omaha Kings",
+  CAP: "Capital Bullets",
+  BAL: "Baltimore Bullets",
+  CIN: "Cincinnati Royals",
+  SDR: "San Diego Rockets",
+  SFW: "San Francisco Warriors",
+  STL: "St. Louis Hawks",
+  CHZ: "Chicago Zephyrs",
+  SYR: "Syracuse Nationals",
+  CHP: "Chicago Packers",
+  PHW: "Philadelphia Warriors",
+  MNL: "Minneapolis Lakers",
+  FTW: "Fort Wayne Pistons",
+  ROC: "Rochester Royals",
+  BLB: "Baltimore Bullets",
+  MLH: "Milwaukee Hawks",
+  INO: "Indianapolis Olympians",
+  TRI: "Tri-Cities Blackhawks",
+  WSC: "Washington Capitols",
+  AND: "Anderson Packers",
+  CHS: "Chicago Stags",
+  DNN: "Denver Nuggets",
+  SHE: "Sheboygan Red Skins",
+  STB: "St. Louis Bombers",
+  WAT: "Waterloo Hawks",
+};
+let tntotc = {
+  "Atlanta Hawks": "ATL",
+  "Boston Celtics": "BOS",
+  "Brooklyn Nets": "BRK",
+  "Charlotte Hornets": "CHH",
+  "Chicago Bulls": "CHI",
+  "Cleveland Cavaliers": "CLE",
+  "Dallas Mavericks": "DAL",
+  "Denver Nuggets": "DNN",
+  "Detroit Pistons": "DET",
+  "Golden State Warriors": "GSW",
+  "Houston Rockets": "HOU",
+  "Indiana Pacers": "IND",
+  "Los Angeles Clippers": "LAC",
+  "Los Angeles Lakers": "LAL",
+  "Memphis Grizzlies": "MEM",
+  "Miami Heat": "MIA",
+  "Milwaukee Bucks": "MIL",
+  "Minnesota Timberwolves": "MIN",
+  "New Orleans Pelicans": "NOP",
+  "New York Knicks": "NYK",
+  "Oklahoma City Thunder": "OKC",
+  "Orlando Magic": "ORL",
+  "Philadelphia 76ers": "PHI",
+  "Phoenix Suns": "PHO",
+  "Portland Trail Blazers": "POR",
+  "Sacramento Kings": "SAC",
+  "San Antonio Spurs": "SAS",
+  "Toronto Raptors": "TOR",
+  "Utah Jazz": "UTA",
+  "Washington Wizards": "WAS",
+  "League Average": "NA",
+  "Charlotte Bobcats": "CHA",
+  "New Orleans Hornets": "NOH",
+  "New Jersey Nets": "NJN",
+  "Seattle SuperSonics": "SEA",
+  "New Orleans/ Oklahoma City Hornets": "NOK",
+  "Vancouver Grizzlies": "VAN",
+  "Washington Bullets": "WSB",
+  "Kansas City Kings": "KCK",
+  "San Diego Clippers": "SDC",
+  "New Orleans Jazz": "NOJ",
+  "Buffalo Braves": "BUF",
+  "New York Nets": "NYN",
+  "Kansas City - Omaha Kings": "KCO",
+  "Capital Bullets": "CAP",
+  "Baltimore Bullets": "BLB",
+  "Cincinnati Royals": "CIN",
+  "San Diego Rockets": "SDR",
+  "San Francisco Warriors": "SFW",
+  "St.Louis Hawks": "STL",
+  "Chicago Zephyrs": "CHZ",
+  "Syracuse Nationals": "SYR",
+  "Chicago Packers": "CHP",
+  "Philadelphia Warriors": "PHW",
+  "Minneapolis Lakers": "MNL",
+  "Fort Wayne Pistons": "FTW",
+  "Rochester Royals": "ROC",
+  "Milwaukee Hawks": "MLH",
+  "Indianapolis Olympians": "INO",
+  "Tri - Cities Blackhawks": "TRI",
+  "Washington Capitols": "WSC",
+  "Anderson Packers": "AND",
+  "Chicago Stags": "CHS",
+  "Sheboygan Red Skins": "SHE",
+  "St.Louis Bombers": "STB",
+  "Waterloo Hawks": "WAT",
+};
 
-let tctotn = { 'ATL': 'Atlanta Hawks', 'BOS': 'Boston Celtics', 'BRK': 'Brooklyn Nets', 'CHO': 'Charlotte Hornets', 'CHI': 'Chicago Bulls', 'CLE': 'Cleveland Cavaliers', 'DAL': 'Dallas Mavericks', 'DEN': 'Denver Nuggets', 'DET': 'Detroit Pistons', 'GSW': 'Golden State Warriors', 'HOU': 'Houston Rockets', 'IND': 'Indiana Pacers', 'LAC': 'Los Angeles Clippers', 'LAL': 'Los Angeles Lakers', 'MEM': 'Memphis Grizzlies', 'MIA': 'Miami Heat', 'MIL': 'Milwaukee Bucks', 'MIN': 'Minnesota Timberwolves', 'NOP': 'New Orleans Pelicans', 'NYK': 'New York Knicks', 'OKC': 'Oklahoma City Thunder', 'ORL': 'Orlando Magic', 'PHI': 'Philadelphia 76ers', 'PHO': 'Phoenix Suns', 'POR': 'Portland Trail Blazers', 'SAC': 'Sacramento Kings', 'SAS': 'San Antonio Spurs', 'TOR': 'Toronto Raptors', 'UTA': 'Utah Jazz', 'WAS': 'Washington Wizards', 'NA': 'League Average', 'CHA': 'Charlotte Bobcats', 'NOH': 'New Orleans Hornets', 'NJN': 'New Jersey Nets', 'SEA': 'Seattle SuperSonics', 'NOK': 'New Orleans/Oklahoma City Hornets', 'CHH': 'Charlotte Hornets', 'VAN': 'Vancouver Grizzlies', 'WSB': 'Washington Bullets', 'KCK': 'Kansas City Kings', 'SDC': 'San Diego Clippers', 'NOJ': 'New Orleans Jazz', 'BUF': 'Buffalo Braves', 'NYN': 'New York Nets', 'KCO': 'Kansas City-Omaha Kings', 'CAP': 'Capital Bullets', 'BAL': 'Baltimore Bullets', 'CIN': 'Cincinnati Royals', 'SDR': 'San Diego Rockets', 'SFW': 'San Francisco Warriors', 'STL': 'St. Louis Hawks', 'CHZ': 'Chicago Zephyrs', 'SYR': 'Syracuse Nationals', 'CHP': 'Chicago Packers', 'PHW': 'Philadelphia Warriors', 'MNL': 'Minneapolis Lakers', 'FTW': 'Fort Wayne Pistons', 'ROC': 'Rochester Royals', 'BLB': 'Baltimore Bullets', 'MLH': 'Milwaukee Hawks', 'INO': 'Indianapolis Olympians', 'TRI': 'Tri-Cities Blackhawks', 'WSC': 'Washington Capitols', 'AND': 'Anderson Packers', 'CHS': 'Chicago Stags', 'DNN': 'Denver Nuggets', 'SHE': 'Sheboygan Red Skins', 'STB': 'St. Louis Bombers', 'WAT': 'Waterloo Hawks' }
-let tntotc = { 'Atlanta Hawks': 'ATL', 'Boston Celtics': 'BOS', 'Brooklyn Nets': 'BRK', 'Charlotte Hornets': 'CHH', 'Chicago Bulls': 'CHI', 'Cleveland Cavaliers': 'CLE', 'Dallas Mavericks': 'DAL', 'Denver Nuggets': 'DNN', 'Detroit Pistons': 'DET', 'Golden State Warriors': 'GSW', 'Houston Rockets': 'HOU', 'Indiana Pacers': 'IND', 'Los Angeles Clippers': 'LAC', 'Los Angeles Lakers': 'LAL', 'Memphis Grizzlies': 'MEM', 'Miami Heat': 'MIA', 'Milwaukee Bucks': 'MIL', 'Minnesota Timberwolves': 'MIN', 'New Orleans Pelicans': 'NOP', 'New York Knicks': 'NYK', 'Oklahoma City Thunder': 'OKC', 'Orlando Magic': 'ORL', 'Philadelphia 76ers': 'PHI', 'Phoenix Suns': 'PHO', 'Portland Trail Blazers': 'POR', 'Sacramento Kings': 'SAC', 'San Antonio Spurs': 'SAS', 'Toronto Raptors': 'TOR', 'Utah Jazz': 'UTA', 'Washington Wizards': 'WAS', 'League Average': 'NA', 'Charlotte Bobcats': 'CHA', 'New Orleans Hornets': 'NOH', 'New Jersey Nets': 'NJN', 'Seattle SuperSonics': 'SEA', 'New Orleans/ Oklahoma City Hornets': 'NOK', 'Vancouver Grizzlies': 'VAN', 'Washington Bullets': 'WSB', 'Kansas City Kings': 'KCK', 'San Diego Clippers': 'SDC', 'New Orleans Jazz': 'NOJ', 'Buffalo Braves': 'BUF', 'New York Nets': 'NYN', 'Kansas City - Omaha Kings': 'KCO', 'Capital Bullets': 'CAP', 'Baltimore Bullets': 'BLB', 'Cincinnati Royals': 'CIN', 'San Diego Rockets': 'SDR', 'San Francisco Warriors': 'SFW', 'St.Louis Hawks': 'STL', 'Chicago Zephyrs': 'CHZ', 'Syracuse Nationals': 'SYR', 'Chicago Packers': 'CHP', 'Philadelphia Warriors': 'PHW', 'Minneapolis Lakers': 'MNL', 'Fort Wayne Pistons': 'FTW', 'Rochester Royals': 'ROC', 'Milwaukee Hawks': 'MLH', 'Indianapolis Olympians': 'INO', 'Tri - Cities Blackhawks': 'TRI', 'Washington Capitols': 'WSC', 'Anderson Packers': 'AND', 'Chicago Stags': 'CHS', 'Sheboygan Red Skins': 'SHE', 'St.Louis Bombers': 'STB', 'Waterloo Hawks': 'WAT' }
-
-let teams = [];
-let count = 0
-function teamlist(teamcode) {
-  if (!teams.includes(tctotn[teamcode])) {
-    teams.push(tctotn[teamcode]);
-  }
-  console.log(teams);
-  if (teams.length == 6) {
-    close_search1()
-    gen_teams(teams)
+function analyze_selection(name, id) {
+  console.log(name);
+  console.log(id);
+  let guesses = document.getElementById("tn9").innerHTML;
+  let player_key = `'${name}', ${id}`;
+  let player_teams = playerDB[player_key][0][1];
+  let first_team = team_names[document.getElementById(first_team_id).value];
+  let second_team = team_names[document.getElementById(second_team_id).value];
+  if (player_teams.includes(first_team) && player_teams.includes(second_team)) {
+    close_search();
+    document.getElementById(selected_button_id).value = "Correct!";
+    let guesses = (parseInt(guesses) - 1).toString;
+  } else {
+    close_search();
+    document.getElementById("tn9").innerHTML = parseInt(guesses) - 1;
+    console.log(document.getElementById("tn9").innerHTML);
   }
 }
-
-function gen_teams(teamlist) {
-  for (let i = teamlist.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [teamlist[i], teamlist[j]] = [teamlist[j], teamlist[i]];
-  }
-  document.getElementById("tn1").innerHTML = teamlist[0];
-  document.getElementById("tn2").innerHTML = teamlist[1];
-  document.getElementById("tn3").innerHTML = teamlist[2];
-  document.getElementById("tn4").innerHTML = teamlist[3];
-  document.getElementById("tn5").innerHTML = teamlist[4];
-  document.getElementById("tn6").innerHTML = teamlist[5];
-  teams = [];
-  count = 0;
-
-}
-function analyze_selection(name, id) { }
 
 // for (let [key, value] of Object.entries(playerDB)) {
 //   let key_array = key.split(",");

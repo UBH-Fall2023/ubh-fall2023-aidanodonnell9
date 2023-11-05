@@ -73,30 +73,31 @@
 
 
         <div class="inputs">
-            <button class="label" id="tn0"> </button>
+            <button class="label" type="tn0"> </button>
             <button class="label" id="tn1">Oklahoma City Thunder</button>
             <button class="label" id="tn2">Portland Trailblazers</button>
             <button class="label" id="tn3">Los Angeles Lakers</button>
-            <button class="guess" id="tn7"> </button>
+            <button class="guess" type="tn7"> </button>
             <button class="label" id="tn4">Los Angeles Clippers</button>
-            <button class="input" id="topleft" onclick="open_search()">Click to Enter Player</button>
-            <button class="input" id="topmiddle" onclick="open_search()">Click to Enter Player</button>
-            <button class="input" id="topright" onclick="open_search()">Click to Enter Player</button>
-            <button class="guesses" id="tn8">Guesses Remaining: </button>
+            <button class="input" id="topleft" onclick="open_search('topleft', 'tn1', 'tn4')">Click to Enter Player</button>
+            <button class="input" id="topmiddle" onclick="open_search('topmiddle', 'tn2', 'tn4')">Click to Enter Player</button>
+            <button class="input" id="topright" onclick="open_search('topright', 'tn3', 'tn4')">Click to Enter Player</button>
+            <button class="guesses" type="tn8">Guesses Remaining: </button>
 
             <button class="label" id="tn5">New York Knicks</button>
 
-            <button class="input" id="middleleft" onclick="open_search()">Click to Enter Player</button>
-            <button class="input" id="middlemiddle" onclick="open_search()">Click to Enter Player</button>
-            <button class="input" id="middleright" onclick="open_search()">Click to Enter Player</button>
+            <button class="input" id="middleleft" onclick="open_search('middleleft', 'tn1', 'tn5')">Click to Enter Player</button>
+            <button class="input" id="middlemiddle" onclick="open_search('middlemiddle', 'tn2', 'tn5')">Click to Enter Player</button>
+            <button class="input" id="middleright" onclick="open_search('middleright', 'tn3', 'tn5')">Click to Enter Player</button>
             <button class="guess" id="tn9">9</button>
 
             <button class="label" id="tn6">Boston Celtics</button>
 
-            <button class="input" id="bottomleft" onclick="open_search()">Click to Enter Player</button>
-            <button class="input" id="bottommiddle" onclick="open_search()">Click to Enter Player</button>
-            <button class="input" id="bottomright" onclick="open_search()">Click to Enter Player</button>
-            <button class="guess" id="tn10"> </button>
+
+            <button class="input" id="bottomleft" onclick="open_search('bottomleft', 'tn1', 'tn6')">Click to Enter Player</button>
+            <button class="input" id="bottommiddle" onclick="open_search('bottommiddle', 'tn2', 'tn6')">Click to Enter Player</button>
+            <button class="input" id="bottomright" onclick="open_search('bottomright', 'tn3', 'tn6')">Click to Enter Player</button>
+            <button class="guess" type="tn10"> </button>
 
 
         </div>

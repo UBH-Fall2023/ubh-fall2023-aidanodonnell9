@@ -1,7 +1,6 @@
 import csv
 
 
-
 def update_teams(team: str):
     old_to_new: dict[str:str] = {
         "BAL": "WAS",
@@ -78,6 +77,22 @@ def team_parse_NBAPlayers():
             if lines[1] == "NBA":
                 adict[lines[2]] = lines[4]
     return adict
+
+
+def team_names():
+    teamDict: dict[str, str] = {}
+    with open("Team Abbrev.csv") as file:
+        csvFile = csv.reader(file)
+        next(csvFile)
+        for lines in csvFile:
+            if lines[0] == "2024":
+                team_name = lines[2]
+                team_abrv = lines[4]
+                teamDict[team_name] = team_abrv
+    with open("data.txt", "w") as t_file:
+        t_file.write(str(teamDict))
+
+
 # def frontend_parse_NBAPlayers[]:
 #     NBAPlayer_Dict: dict[[str, int], list[str]] = {}
 #     with open["Player Career Info.csv"] as file:
@@ -94,3 +109,4 @@ def team_parse_NBAPlayers():
 
 # backend_parse_NBAPlayers()
 print(team_parse_NBAPlayers())
+team_names()
