@@ -43836,28 +43836,6 @@ function analyze_selection(name, id) {
   let first_team = team_names[document.getElementById(first_team_id).innerHTML];
   let second_team =
     team_names[document.getElementById(second_team_id).innerHTML];
-  if (player_teams.includes(first_team) && player_teams.includes(second_team)) {
-    close_search();
-    document.getElementById(selected_button_id).innerHTML = name;
-    document.getElementById(selected_button_id).style.backgroundColor = "green";
-    correct += 1;
-  } else {
-    close_search();
-  }
-  if (guesses > 0) {
-    guesses -= 1;
-  }
-
-  if (guesses == 0) {
-    if (correct == 9) {
-      document
-        .querySelector(".gameOver")
-        .querySelector(".game-over").style.color = "green";
-      document.querySelector(".gameOver").style.border = "3px solid green";
-      document
-        .querySelector(".gameOver")
-        .querySelector(".game-over").innerHTML = "You Win, You Know Ball!";
-      // document.querySelector(".gameOver").style.visibility = "visible";
   if (!player_guessed.includes(name)) {
     if (
       player_teams.includes(first_team) &&
