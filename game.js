@@ -43839,7 +43839,7 @@ function analyze_selection(name, id) {
   } else {
     close_search();
   }
-  if (guesses >= 0) {
+  if (guesses > 0) {
     guesses -= 1;
   }
 
