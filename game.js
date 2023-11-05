@@ -43639,8 +43639,15 @@ function close_search() {
   document.querySelector(".wrapper").style.visibility = "hidden";
   document.getElementById("search-bar").value = "";
 }
+function close_search1() {
+  document.querySelector(".wrapper2").style.visibility = "hidden";
 
-function analyze_selection(name, id) {}
+}
+function pickTeams() {
+  document.querySelector(".wrapper2").style.visibility = "visible";
+
+}
+function analyze_selection(name, id) { }
 
 // for (let [key, value] of Object.entries(playerDB)) {
 //   let key_array = key.split(",");

@@ -1,62 +1,62 @@
 @font-face {
     font-family: NBA;
     src: url(/fonts/nba-spurs.ttf);
-  }
+}
 
 
-  
-@media (max-width: 1370px) {
 
-    .wrapper{
+@media (max-width: 0px) {
+
+    .wrapper {
         visibility: hidden;
         position: absolute;
         z-index: 2;
         width: 650px;
         margin: 130px auto 0;
     }
-    
-    .content{
+
+    .content {
         margin-top: 15px;
         padding: 20px;
         border-radius: 7px;
         background-color: white
     }
-    
-    .content .search{
+
+    .content .search {
         position: relative;
     }
-    
-    .search input{
+
+    .search input {
         height: 40px;
         width: 100%;
         outline: none;
         font-size: 17px;
         border: 1px solid #b3b3b3;
     }
-    
-    .content .options{
+
+    .content .options {
         margin-top: 10px;
         max-height: 200px;
         overflow: auto;
     }
-    
-    .options button{
+
+    .options button {
         position: absolute;
         float: right;
         left: 550px;
     }
-    
-    .options h5{
+
+    .options h5 {
         font-size: 15pt;
     }
-    
-    .options h6{
+
+    .options h6 {
         position: relative;
         top: 0px;
         left: 5px;
     }
-    
-    .options li{
+
+    .options li {
         position: relative;
         max-height: 50px;
         padding: 0 13px;
@@ -69,10 +69,10 @@
         line-height: 0px;
         align-items: center;
     }
-    
-    .options li:hover{
+
+    .options li:hover {
         background: #f2f2f2;
-    
+
     }
 
 
@@ -218,13 +218,114 @@
 }
 
 
-@media (min-width: 1370px) {
+@media (min-width: 0px) {
+
+    div.teamslist {
+        display: flex;
+        justify-content: space-between;
+
+        z-index: 5;
+        position: relative;
+        margin: 0;
+        position: absolute;
+        top: 25%;
+        left: 22%;
+
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        /* left: 25%;
+    right: 25%; */
+        display: grid;
+        /* width: 50vw;
+        height: 50vh; */
+        padding: 20px;
+        grid-template-columns: repeat(6, 0.01fr);
+        grid-template-rows: repeat(6, 1fr);
+        width: 800px;
+        height: 500px;
+        background-color: #666666;
+        top: 440px;
+        left: 50%;
+
+    }
+
+    button.newteam {
+        font-family: NBA;
+        color: #005bbb;
+        border-radius: 25px;
+        background: #fff;
+        font: 100px;
+        width: 100px;
+        height: 30px;
+        border: 3px solid #055bbb;
+        position: absolute;
+        top: 60%;
+        left: 6%;
+    }
+
+    button.t {
+        background: transparent;
+        width: 0px;
+        height: 0px;
+    }
+
+    button.close {
+        z-index: 10;
+        color: white;
+        position: fixed;
+        left: 1100px;
+        bottom: 550px;
+        background: red;
+        border-color: #666666;
+        border-radius: 25px;
+        height: 40px;
+        width: 40px;
+    }
+
+    button.prompt {
+        font-family: NBA;
+        color: #fff;
+        border-color: transparent;
+        background-color: #666666;
+        position: absolute;
+        font-size: 50px;
+        width: 840px;
+        top: 116px;
+        left: 22.65%;
+        z-index: 9;
+    }
+
+    .teamname {
+        z-index: 7;
+        text-align: center;
+        font-family: NBA;
+        background-color: transparent;
+        border: 5px solid #055bbb;
+        color: #055bbb;
+        background-color: #fff;
+        padding: 20px;
+        width: 10vh;
+        height: 10vh;
+        font-size: 20px;
+    }
+
+    .teamname:hover {
+        font-family: NBA;
+        color: white;
+        border: 5px solid #666666;
+        background-color: grey;
+        padding: 20px;
+        width: 10vh;
+        height: 10vh;
+        font-size: 20px;
+    }
+
     body {
         font-family: NBA;
         background-color: white;
     }
 
-    button.Exit{
+    button.Exit {
         color: white;
         position: fixed;
         left: 1040px;
@@ -237,56 +338,56 @@
 
     }
 
-    .wrapper{
+    .wrapper {
         visibility: hidden;
         position: relative;
         z-index: 2;
         width: 650px;
         margin: 130px auto 0;
     }
-    
-    .content{
+
+    .content {
         margin-top: 15px;
         padding: 20px;
         border-radius: 7px;
         background-color: white
     }
-    
-    .content .search{
+
+    .content .search {
         position: relative;
     }
-    
-    .search input{
+
+    .search input {
         height: 40px;
         width: 100%;
         outline: none;
         font-size: 17px;
         border: 1px solid #b3b3b3;
     }
-    
-    .content .options{
+
+    .content .options {
         margin-top: 10px;
         max-height: 200px;
         overflow: auto;
     }
-    
-    .options button{
+
+    .options button {
         position: absolute;
         float: right;
         left: 550px;
     }
-    
-    .options h5{
+
+    .options h5 {
         font-size: 15pt;
     }
-    
-    .options h6{
+
+    .options h6 {
         position: relative;
         top: 0px;
         left: 5px;
     }
-    
-    .options li{
+
+    .options li {
         position: relative;
         max-height: 50px;
         padding: 0 13px;
@@ -299,10 +400,10 @@
         line-height: 0px;
         align-items: center;
     }
-    
-    .options li:hover{
+
+    .options li:hover {
         background: #f2f2f2;
-    
+
     }
 
     div.title {
@@ -481,6 +582,10 @@
         height: 30px;
     }
 
+    button.newteam:hover {
+        scale: 1.1;
+    }
+
     button.sty:hover {
         scale: 1.1;
     }
@@ -492,4 +597,6 @@
     button.sty2:hover {
         scale: 1.1;
     }
+
+
 }
