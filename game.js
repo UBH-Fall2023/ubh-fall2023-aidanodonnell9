@@ -43865,11 +43865,9 @@ function analyze_selection(name, id) {
 }
 
 let teams = [];
-let tl = [];
 let count = 0;
 function teamlist(teamcode) {
   if (!teams.includes(tctotn[teamcode])) {
-    tl.push(teamcode);
     teams.push(tctotn[teamcode]);
   }
   document.getElementById(teamcode).style.backgroundColor = "grey";
@@ -43881,6 +43879,17 @@ function teamlist(teamcode) {
   }
 }
 
+
+function randombutton() {
+  acc = [];
+  for (let i of Object.keys(team_names)) {
+    acc.push(i);
+  }
+  console.log(acc);
+  gen_teams(acc);
+  close_search1();
+  reset_game();
+}
 function gen_teams(teamlist) {
   for (let i = teamlist.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -43892,13 +43901,7 @@ function gen_teams(teamlist) {
   document.getElementById("tn4").innerHTML = teamlist[3];
   document.getElementById("tn5").innerHTML = teamlist[4];
   document.getElementById("tn6").innerHTML = teamlist[5];
-  document.getElementById(tl[0]).style.backgroundColor = "white";
-  document.getElementById(tl[1]).style.backgroundColor = "white";
-  document.getElementById(tl[2]).style.backgroundColor = "white";
-  document.getElementById(tl[3]).style.backgroundColor = "white";
-  document.getElementById(tl[4]).style.backgroundColor = "white";
-  document.getElementById(tl[5]).style.backgroundColor = "white";
-  tl = [];
+
   teams = [];
   count = 0;
   guesses = 9;
