@@ -43649,6 +43649,19 @@ let selected_button_id = "";
 let first_team_id = "";
 let second_team_id = "";
 let unlimited_guesses = false;
+let guesses = 9;
+
+function demo_teams() {
+  document.getElementById("tn9").innerHTML = "9";
+  guesses = 9;
+  reset_game();
+  document.getElementById("tn1").innerHTML = "New York Knicks";
+  document.getElementById("tn2").innerHTML = "Brooklyn Nets";
+  document.getElementById("tn3").innerHTML = "Los Angeles Lakers";
+  document.getElementById("tn4").innerHTML = "Cleveland Cavaliers";
+  document.getElementById("tn5").innerHTML = "Utah Jazz";
+  document.getElementById("tn6").innerHTML = "Golden State Warriors";
+}
 
 function unlimited_mode() {
   unlimited_guesses = true;
@@ -43833,7 +43846,6 @@ let tntotc = {
 };
 
 let player_guessed = [];
-let guesses = 9;
 let correct = 0;
 function analyze_selection(name, id) {
   let guesses_value = document.getElementById("tn9").innerHTML;
@@ -43869,7 +43881,7 @@ function analyze_selection(name, id) {
         document.querySelector(".gameOver").style.border = "3px solid green";
         document
           .querySelector(".gameOver")
-          .querySelector(".game-over").innerHTML = "You Win!";
+          .querySelector(".game-over").innerHTML = "You Know Ball!";
         // document.querySelector(".gameOver").style.visibility = "visible";
       }
       document.querySelector(".gameOver").style.visibility = "visible";
