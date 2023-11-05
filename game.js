@@ -43829,7 +43829,7 @@ let tntotc = {
 let guesses = 9;
 let correct = 0;
 function analyze_selection(name, id) {
-  let guesses = document.getElementById("tn9").innerHTML;
+  let guesses_value = document.getElementById("tn9").innerHTML;
   let player_key = `'${name}', ${id}`;
   let player_teams = playerDB[player_key][0][1];
   let first_team = team_names[document.getElementById(first_team_id).innerHTML];
@@ -43837,10 +43837,11 @@ function analyze_selection(name, id) {
     team_names[document.getElementById(second_team_id).innerHTML];
   if (player_teams.includes(first_team) && player_teams.includes(second_team)) {
     close_search();
-    document.getElementById("tn9").innerHTML = parseInt(guesses) - 1;
+    document.getElementById("tn9").innerHTML = parseInt(guesses_value) - 1;
     document.getElementById(selected_button_id).innerHTML = "Correct!";
     document.getElementById(selected_button_id).style.backgroundColor = "green";
     correct += 1;
+    console.log(correct);
   } else {
     close_search();
   }
@@ -43850,8 +43851,14 @@ function analyze_selection(name, id) {
 
   if (guesses == 0) {
     if (correct == 9) {
-      document.querySelector(".gameOver").innerHTML = "You Win!";
-      document.querySelector(".gameOver").style.visibility = "visible";
+      document
+        .querySelector(".gameOver")
+        .querySelector(".game-over").style.color = "green";
+      document.querySelector(".gameOver").style.border = "3px solid green";
+      document
+        .querySelector(".gameOver")
+        .querySelector(".game-over").innerHTML = "You Win!";
+      // document.querySelector(".gameOver").style.visibility = "visible";
     }
     document.querySelector(".gameOver").style.visibility = "visible";
   }
