@@ -31,36 +31,36 @@
         <div class='teamslist'>
 
 
-            <button class='teamname' onclick="teamlist('ATL')">ATL</button>
-            <button class='teamname' onclick="teamlist('BOS')">BOS</button>
-            <button class='teamname' onclick="teamlist('BRK')">BRK</button>
-            <button class='teamname' onclick="teamlist('CHI')">CHI</button>
-            <button class='teamname' onclick="teamlist('CHO')">CHO</button>
-            <button class='teamname' onclick="teamlist('CLE')">CLE</button>
-            <button class='teamname' onclick="teamlist('DAL')">DAL</button>
-            <button class='teamname' onclick="teamlist('DEN')">DEN</button>
-            <button class='teamname' onclick="teamlist('DET')">DET</button>
-            <button class='teamname' onclick="teamlist('GSW')">GSW</button>
-            <button class='teamname' onclick="teamlist('HOU')">HOU</button>
-            <button class='teamname' onclick="teamlist('IND')">IND</button>
-            <button class='teamname' onclick="teamlist('LAC')">LAC</button>
-            <button class='teamname' onclick="teamlist('LAL')">LAL</button>
-            <button class='teamname' onclick="teamlist('MEM')">MEM</button>
-            <button class='teamname' onclick="teamlist('MIA')">MIA</button>
-            <button class='teamname' onclick="teamlist('MIL')">MIL</button>
-            <button class='teamname' onclick="teamlist('MIN')">MIN</button>
-            <button class='teamname' onclick="teamlist('NOP')">NOP</button>
-            <button class='teamname' onclick="teamlist('NYK')">NYK</button>
-            <button class='teamname' onclick="teamlist('OKC')">OKC</button>
-            <button class='teamname' onclick="teamlist('ORL')">ORL</button>
-            <button class='teamname' onclick="teamlist('PHI')">PHI</button>
-            <button class='teamname' onclick="teamlist('PHO')">PHO</button>
-            <button class='teamname' onclick="teamlist('POR')">POR</button>
-            <button class='teamname' onclick="teamlist('SAC')">SAC</button>
-            <button class='teamname' onclick="teamlist('SAS')">SAS</button>
-            <button class='teamname' onclick="teamlist('TOR')">TOR</button>
-            <button class='teamname' onclick="teamlist('UTA')">UTA</button>
-            <button class='teamname' onclick="teamlist('WAS')">WAS</button>
+            <button class='teamname' id='ATL' onclick="teamlist('ATL')">ATL</button>
+            <button class='teamname' id='BOS' onclick="teamlist('BOS')">BOS</button>
+            <button class='teamname' id='BRK' onclick="teamlist('BRK')">BRK</button>
+            <button class='teamname' id='CHI' onclick="teamlist('CHI')">CHI</button>
+            <button class='teamname' id='CHO' onclick="teamlist('CHO')">CHO</button>
+            <button class='teamname' id='CLE' onclick="teamlist('CLE')">CLE</button>
+            <button class='teamname' id='DAL' onclick="teamlist('DAL')">DAL</button>
+            <button class='teamname' id='DEN' onclick="teamlist('DEN')">DEN</button>
+            <button class='teamname' id='DET' onclick="teamlist('DET')">DET</button>
+            <button class='teamname' id='GSW' onclick="teamlist('GSW')">GSW</button>
+            <button class='teamname' id='HOU' onclick="teamlist('HOU')">HOU</button>
+            <button class='teamname' id='IND' onclick="teamlist('IND')">IND</button>
+            <button class='teamname' id='LAC' onclick="teamlist('LAC')">LAC</button>
+            <button class='teamname' id='LAL' onclick="teamlist('LAL')">LAL</button>
+            <button class='teamname' id='MEM' onclick="teamlist('MEM')">MEM</button>
+            <button class='teamname' id='MIA' onclick="teamlist('MIA')">MIA</button>
+            <button class='teamname' id='MIL' onclick="teamlist('MIL')">MIL</button>
+            <button class='teamname' id='MIN' onclick="teamlist('MIN')">MIN</button>
+            <button class='teamname' id='NOP' onclick="teamlist('NOP')">NOP</button>
+            <button class='teamname' id='NYK' onclick="teamlist('NYK')">NYK</button>
+            <button class='teamname' id='OKC' onclick="teamlist('OKC')">OKC</button>
+            <button class='teamname' id='ORL' onclick="teamlist('ORL')">ORL</button>
+            <button class='teamname' id='PHI' onclick="teamlist('PHI')">PHI</button>
+            <button class='teamname' id='PHO' onclick="teamlist('PHO')">PHO</button>
+            <button class='teamname' id='POR' onclick="teamlist('POR')">POR</button>
+            <button class='teamname' id='SAC' onclick="teamlist('SAC')">SAC</button>
+            <button class='teamname' id='SAS' onclick="teamlist('SAS')">SAS</button>
+            <button class='teamname' id='TOR' onclick="teamlist('TOR')">TOR</button>
+            <button class='teamname' id='UTA' onclick="teamlist('UTA')">UTA</button>
+            <button class='teamname' id='WAS' onclick="teamlist('WAS')">WAS</button>
 
         </div>
         <button id='menu' class="close" onclick="close_search1()">X</button>
@@ -83,24 +83,33 @@
             <button class="label" id="tn3">Los Angeles Lakers</button>
             <button class="guess" type="tn7"> </button>
             <button class="label" id="tn4">Los Angeles Clippers</button>
-            <button class="input" id="topleft" onclick="open_search('topleft', 'tn1', 'tn4')">Click to Enter Player</button>
-            <button class="input" id="topmiddle" onclick="open_search('topmiddle', 'tn2', 'tn4')">Click to Enter Player</button>
-            <button class="input" id="topright" onclick="open_search('topright', 'tn3', 'tn4')">Click to Enter Player</button>
+            <button class="input" id="topleft" onclick="open_search('topleft', 'tn1', 'tn4')">Click to Enter
+                Player</button>
+            <button class="input" id="topmiddle" onclick="open_search('topmiddle', 'tn2', 'tn4')">Click to Enter
+                Player</button>
+            <button class="input" id="topright" onclick="open_search('topright', 'tn3', 'tn4')">Click to Enter
+                Player</button>
             <button class="guesses" type="tn8">Guesses Remaining: </button>
 
             <button class="label" id="tn5">New York Knicks</button>
 
-            <button class="input" id="middleleft" onclick="open_search('middleleft', 'tn1', 'tn5')">Click to Enter Player</button>
-            <button class="input" id="middlemiddle" onclick="open_search('middlemiddle', 'tn2', 'tn5')">Click to Enter Player</button>
-            <button class="input" id="middleright" onclick="open_search('middleright', 'tn3', 'tn5')">Click to Enter Player</button>
+            <button class="input" id="middleleft" onclick="open_search('middleleft', 'tn1', 'tn5')">Click to Enter
+                Player</button>
+            <button class="input" id="middlemiddle" onclick="open_search('middlemiddle', 'tn2', 'tn5')">Click to Enter
+                Player</button>
+            <button class="input" id="middleright" onclick="open_search('middleright', 'tn3', 'tn5')">Click to Enter
+                Player</button>
             <button class="guess" id="tn9">9</button>
 
             <button class="label" id="tn6">Boston Celtics</button>
 
 
-            <button class="input" id="bottomleft" onclick="open_search('bottomleft', 'tn1', 'tn6')">Click to Enter Player</button>
-            <button class="input" id="bottommiddle" onclick="open_search('bottommiddle', 'tn2', 'tn6')">Click to Enter Player</button>
-            <button class="input" id="bottomright" onclick="open_search('bottomright', 'tn3', 'tn6')">Click to Enter Player</button>
+            <button class="input" id="bottomleft" onclick="open_search('bottomleft', 'tn1', 'tn6')">Click to Enter
+                Player</button>
+            <button class="input" id="bottommiddle" onclick="open_search('bottommiddle', 'tn2', 'tn6')">Click to Enter
+                Player</button>
+            <button class="input" id="bottomright" onclick="open_search('bottomright', 'tn3', 'tn6')">Click to Enter
+                Player</button>
             <button class="guess" type="tn10"> </button>
 
 
