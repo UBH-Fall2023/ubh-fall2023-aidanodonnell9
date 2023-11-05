@@ -1,6 +1,7 @@
 import csv
 
 
+
 def update_teams(team: str):
     old_to_new: dict[str:str] = {
         "BAL": "WAS",
@@ -67,6 +68,16 @@ def backend_parse_NBAPlayers():
         t_file.write(str(NBAPlayer_Dict))
 
 
+def team_parse_NBAPlayers():
+    adict = {}
+    same_key_found = False
+    with open("Team Abbrev.csv", "r") as file:
+        csvFile = csv.reader(file)
+        next(csvFile)
+        for lines in csvFile:
+            if lines[1] == "NBA":
+                adict[lines[2]] = lines[4]
+    return adict
 # def frontend_parse_NBAPlayers[]:
 #     NBAPlayer_Dict: dict[[str, int], list[str]] = {}
 #     with open["Player Career Info.csv"] as file:
@@ -81,4 +92,5 @@ def backend_parse_NBAPlayers():
 #         print[NBAPlayer_Dict]
 
 
-backend_parse_NBAPlayers()
+# backend_parse_NBAPlayers()
+print(team_parse_NBAPlayers())

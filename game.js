@@ -43645,6 +43645,38 @@ function close_search1() {
 }
 function pickTeams() {
   document.querySelector(".wrapper2").style.visibility = "visible";
+}
+
+
+let tctotn = { 'ATL': 'Atlanta Hawks', 'BOS': 'Boston Celtics', 'BRK': 'Brooklyn Nets', 'CHO': 'Charlotte Hornets', 'CHI': 'Chicago Bulls', 'CLE': 'Cleveland Cavaliers', 'DAL': 'Dallas Mavericks', 'DEN': 'Denver Nuggets', 'DET': 'Detroit Pistons', 'GSW': 'Golden State Warriors', 'HOU': 'Houston Rockets', 'IND': 'Indiana Pacers', 'LAC': 'Los Angeles Clippers', 'LAL': 'Los Angeles Lakers', 'MEM': 'Memphis Grizzlies', 'MIA': 'Miami Heat', 'MIL': 'Milwaukee Bucks', 'MIN': 'Minnesota Timberwolves', 'NOP': 'New Orleans Pelicans', 'NYK': 'New York Knicks', 'OKC': 'Oklahoma City Thunder', 'ORL': 'Orlando Magic', 'PHI': 'Philadelphia 76ers', 'PHO': 'Phoenix Suns', 'POR': 'Portland Trail Blazers', 'SAC': 'Sacramento Kings', 'SAS': 'San Antonio Spurs', 'TOR': 'Toronto Raptors', 'UTA': 'Utah Jazz', 'WAS': 'Washington Wizards', 'NA': 'League Average', 'CHA': 'Charlotte Bobcats', 'NOH': 'New Orleans Hornets', 'NJN': 'New Jersey Nets', 'SEA': 'Seattle SuperSonics', 'NOK': 'New Orleans/Oklahoma City Hornets', 'CHH': 'Charlotte Hornets', 'VAN': 'Vancouver Grizzlies', 'WSB': 'Washington Bullets', 'KCK': 'Kansas City Kings', 'SDC': 'San Diego Clippers', 'NOJ': 'New Orleans Jazz', 'BUF': 'Buffalo Braves', 'NYN': 'New York Nets', 'KCO': 'Kansas City-Omaha Kings', 'CAP': 'Capital Bullets', 'BAL': 'Baltimore Bullets', 'CIN': 'Cincinnati Royals', 'SDR': 'San Diego Rockets', 'SFW': 'San Francisco Warriors', 'STL': 'St. Louis Hawks', 'CHZ': 'Chicago Zephyrs', 'SYR': 'Syracuse Nationals', 'CHP': 'Chicago Packers', 'PHW': 'Philadelphia Warriors', 'MNL': 'Minneapolis Lakers', 'FTW': 'Fort Wayne Pistons', 'ROC': 'Rochester Royals', 'BLB': 'Baltimore Bullets', 'MLH': 'Milwaukee Hawks', 'INO': 'Indianapolis Olympians', 'TRI': 'Tri-Cities Blackhawks', 'WSC': 'Washington Capitols', 'AND': 'Anderson Packers', 'CHS': 'Chicago Stags', 'DNN': 'Denver Nuggets', 'SHE': 'Sheboygan Red Skins', 'STB': 'St. Louis Bombers', 'WAT': 'Waterloo Hawks' }
+let tntotc = { 'Atlanta Hawks': 'ATL', 'Boston Celtics': 'BOS', 'Brooklyn Nets': 'BRK', 'Charlotte Hornets': 'CHH', 'Chicago Bulls': 'CHI', 'Cleveland Cavaliers': 'CLE', 'Dallas Mavericks': 'DAL', 'Denver Nuggets': 'DNN', 'Detroit Pistons': 'DET', 'Golden State Warriors': 'GSW', 'Houston Rockets': 'HOU', 'Indiana Pacers': 'IND', 'Los Angeles Clippers': 'LAC', 'Los Angeles Lakers': 'LAL', 'Memphis Grizzlies': 'MEM', 'Miami Heat': 'MIA', 'Milwaukee Bucks': 'MIL', 'Minnesota Timberwolves': 'MIN', 'New Orleans Pelicans': 'NOP', 'New York Knicks': 'NYK', 'Oklahoma City Thunder': 'OKC', 'Orlando Magic': 'ORL', 'Philadelphia 76ers': 'PHI', 'Phoenix Suns': 'PHO', 'Portland Trail Blazers': 'POR', 'Sacramento Kings': 'SAC', 'San Antonio Spurs': 'SAS', 'Toronto Raptors': 'TOR', 'Utah Jazz': 'UTA', 'Washington Wizards': 'WAS', 'League Average': 'NA', 'Charlotte Bobcats': 'CHA', 'New Orleans Hornets': 'NOH', 'New Jersey Nets': 'NJN', 'Seattle SuperSonics': 'SEA', 'New Orleans/ Oklahoma City Hornets': 'NOK', 'Vancouver Grizzlies': 'VAN', 'Washington Bullets': 'WSB', 'Kansas City Kings': 'KCK', 'San Diego Clippers': 'SDC', 'New Orleans Jazz': 'NOJ', 'Buffalo Braves': 'BUF', 'New York Nets': 'NYN', 'Kansas City - Omaha Kings': 'KCO', 'Capital Bullets': 'CAP', 'Baltimore Bullets': 'BLB', 'Cincinnati Royals': 'CIN', 'San Diego Rockets': 'SDR', 'San Francisco Warriors': 'SFW', 'St.Louis Hawks': 'STL', 'Chicago Zephyrs': 'CHZ', 'Syracuse Nationals': 'SYR', 'Chicago Packers': 'CHP', 'Philadelphia Warriors': 'PHW', 'Minneapolis Lakers': 'MNL', 'Fort Wayne Pistons': 'FTW', 'Rochester Royals': 'ROC', 'Milwaukee Hawks': 'MLH', 'Indianapolis Olympians': 'INO', 'Tri - Cities Blackhawks': 'TRI', 'Washington Capitols': 'WSC', 'Anderson Packers': 'AND', 'Chicago Stags': 'CHS', 'Sheboygan Red Skins': 'SHE', 'St.Louis Bombers': 'STB', 'Waterloo Hawks': 'WAT' }
+
+let teams = [];
+let count = 0
+function teamlist(teamcode) {
+  if (!teams.includes(tctotn[teamcode])) {
+    teams.push(tctotn[teamcode]);
+  }
+  console.log(teams);
+  if (teams.length == 6) {
+    close_search1()
+    gen_teams(teams)
+  }
+}
+
+function gen_teams(teamlist) {
+  for (let i = teamlist.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [teamlist[i], teamlist[j]] = [teamlist[j], teamlist[i]];
+  }
+  document.getElementById("tn1").innerHTML = teamlist[0];
+  document.getElementById("tn2").innerHTML = teamlist[1];
+  document.getElementById("tn3").innerHTML = teamlist[2];
+  document.getElementById("tn4").innerHTML = teamlist[3];
+  document.getElementById("tn5").innerHTML = teamlist[4];
+  document.getElementById("tn6").innerHTML = teamlist[5];
+  teams = [];
+  count = 0;
 
 }
 function analyze_selection(name, id) { }
