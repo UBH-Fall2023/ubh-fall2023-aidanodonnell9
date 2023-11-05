@@ -219,8 +219,8 @@
 
 
 @media (min-width: 0px) {
-    
-    div.gameOver{
+
+    div.gameOver {
         visibility: hidden;
         background-color: white;
         border: 3px solid red;
@@ -233,7 +233,7 @@
         height: 250px;
     }
 
-    button.restart{
+    button.restart {
         font-family: NBA;
         position: relative;
         position: absolute;
@@ -243,9 +243,9 @@
         left: 250px;
     }
 
-    .gameOver h1{
+    .gameOver h1 {
         color: red;
-        font-size: 50px;
+        font-size: 35px;
     }
 
     div.teamslist {
@@ -277,7 +277,7 @@
 
     }
 
-    button.random{
+    button.random {
         position: relative;
         left: 365px;
         font-family: NBA;
@@ -292,7 +292,7 @@
         text-align: center;
     }
 
-    button.random:hover{
+    button.random:hover {
         font-family: NBA;
         color: white;
         border: 5px solid #666666;
@@ -403,7 +403,7 @@
 
     }
 
-    button.Exit:hover{
+    button.Exit:hover {
         border: 1px solid black;
         color: black;
         background: white;

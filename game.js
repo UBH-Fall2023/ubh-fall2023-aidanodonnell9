@@ -43855,7 +43855,7 @@ function analyze_selection(name, id) {
       document.querySelector(".gameOver").style.border = "3px solid green";
       document
         .querySelector(".gameOver")
-        .querySelector(".game-over").innerHTML = "You Win!";
+        .querySelector(".game-over").innerHTML = "You Win, You Know Ball!";
       // document.querySelector(".gameOver").style.visibility = "visible";
     }
     document.querySelector(".gameOver").style.visibility = "visible";
