@@ -43637,6 +43637,7 @@ function open_search() {
 
 function close_search() {
   document.querySelector(".wrapper").style.visibility = "hidden";
+  document.getElementById("search-bar").value = "";
 }
 
 function analyze_selection(name, id) {}
