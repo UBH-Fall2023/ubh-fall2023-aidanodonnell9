@@ -119,7 +119,7 @@
     button.input {
         font-family: NBA;
         background-color: transparent;
-        border: 5px solid #055bbb;
+        border: 5px solid grey;
         color: transparent;
         background-color: #fff;
         padding: 20px;
@@ -132,7 +132,7 @@
         font-family: NBA;
         text-shadow: -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -.5px .5px 0 #fff, 0.5px 0.5px 0 #fff;
         color: #005bbb;
-        border: 5px solid #666666;
+        border: 5px solid #005bbb;
         background-color: grey;
         padding: 20px;
         width: 20vh;
@@ -531,7 +531,7 @@
     button.input {
         font-family: NBA;
         background-color: transparent;
-        border: 5px solid #055bbb;
+        border: 5px solid grey;
         color: transparent;
         padding: 20px;
         width: 20vh;
@@ -544,7 +544,7 @@
         text-shadow: -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -.5px .5px 0 #fff, 0.5px 0.5px 0 #fff;
 
         color: #005bbb;
-        border: 5px solid #666666;
+        border: 5px solid #005bbb;
         background-color: grey;
         padding: 20px;
         width: 20vh;
