@@ -277,6 +277,30 @@
 
     }
 
+    button.random{
+        position: relative;
+        left: 365px;
+        font-family: NBA;
+        background-color: transparent;
+        border: 5px solid #055bbb;
+        color: #055bbb;
+        background-color: #fff;
+        padding: 20px;
+        width: 15vh;
+        height: 10vh;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    button.random:hover{
+        font-family: NBA;
+        color: white;
+        border: 5px solid #666666;
+        background-color: grey;
+        padding: 20px;
+        font-size: 20px;
+    }
+
     button.newteam {
         font-family: NBA;
         color: #005bbb;
