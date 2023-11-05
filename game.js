@@ -43826,6 +43826,7 @@ let tntotc = {
   "Waterloo Hawks": "WAT",
 };
 
+let player_guessed = [];
 let guesses = 9;
 let correct = 0;
 function analyze_selection(name, id) {
@@ -43857,11 +43858,40 @@ function analyze_selection(name, id) {
         .querySelector(".gameOver")
         .querySelector(".game-over").innerHTML = "You Win, You Know Ball!";
       // document.querySelector(".gameOver").style.visibility = "visible";
+  if (!player_guessed.includes(name)) {
+    if (
+      player_teams.includes(first_team) &&
+      player_teams.includes(second_team)
+    ) {
+      player_guessed.push(name);
+      close_search();
+      document.getElementById(selected_button_id).innerHTML = name;
+      document.getElementById(selected_button_id).style.backgroundColor =
+        "green";
+      correct += 1;
+    } else {
+      close_search();
     }
-    document.querySelector(".gameOver").style.visibility = "visible";
-  }
+    if (guesses > 0) {
+      guesses -= 1;
+    }
 
-  document.getElementById("tn9").innerHTML = guesses;
+    if (guesses == 0) {
+      if (correct == 9) {
+        document
+          .querySelector(".gameOver")
+          .querySelector(".game-over").style.color = "green";
+        document.querySelector(".gameOver").style.border = "3px solid green";
+        document
+          .querySelector(".gameOver")
+          .querySelector(".game-over").innerHTML = "You Win!";
+        // document.querySelector(".gameOver").style.visibility = "visible";
+      }
+      document.querySelector(".gameOver").style.visibility = "visible";
+    }
+
+    document.getElementById("tn9").innerHTML = guesses;
+  }
 }
 
 let teams = [];
@@ -43878,7 +43908,6 @@ function teamlist(teamcode) {
     reset_game();
   }
 }
-
 
 function randombutton() {
   acc = [];
@@ -43918,6 +43947,7 @@ function gen_teams(teamlist) {
 }
 
 function reset_game() {
+  player_guessed = [];
   document.getElementById("topleft").innerHTML = "Click to Enter Player";
   document.getElementById("topleft").style.backgroundColor = "transparent";
   document.getElementById("topmiddle").innerHTML = "Click to Enter Player";
