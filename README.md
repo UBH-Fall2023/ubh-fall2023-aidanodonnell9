@@ -10,3 +10,6 @@
 - Projects can not have been submitted to another event, including other hackathons this weekend.
 - [Code of Conduct](https://drive.google.com/file/d/1RH_TtRu6EOHSbOoiSj2h1Q4jswtVILzE/view)
 - [MLH Code of Conduct](https://static.mlh.io/docs/mlh-code-of-conduct.pdf)
+
+- # Database Source:
+- ["NBA Stats (1947-present)"](https://www.kaggle.com/datasets/sumitrodatta/nba-aba-baa-stats) by Sumitro Datta
