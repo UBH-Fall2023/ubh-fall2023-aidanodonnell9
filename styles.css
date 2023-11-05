@@ -219,6 +219,34 @@
 
 
 @media (min-width: 0px) {
+    
+    div.gameOver{
+        visibility: hidden;
+        background-color: white;
+        border: 3px solid red;
+        z-index: 6;
+        position: relative;
+        position: absolute;
+        bottom: 275px;
+        left: 435px;
+        width: 600px;
+        height: 250px;
+    }
+
+    button.restart{
+        font-family: NBA;
+        position: relative;
+        position: absolute;
+        height: 50px;
+        width: 100px;
+        bottom: 90px;
+        left: 250px;
+    }
+
+    .gameOver h1{
+        color: red;
+        font-size: 50px;
+    }
 
     div.teamslist {
         display: flex;
@@ -454,7 +482,6 @@
         background-color: transparent;
         border: 5px solid #055bbb;
         color: transparent;
-        background-color: #fff;
         padding: 20px;
         width: 20vh;
         height: 20vh;

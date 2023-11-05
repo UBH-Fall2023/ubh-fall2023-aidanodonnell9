@@ -43846,6 +43846,10 @@ function analyze_selection(name, id) {
     guesses -= 1;
   }
 
+  if (guesses == 0) {
+    document.querySelector(".gameOver").style.visibility = "visible";
+  }
+
   document.getElementById("tn9").innerHTML = guesses;
   console.log(document.getElementById("tn9").innerHTML);
 }
@@ -43860,6 +43864,7 @@ function teamlist(teamcode) {
   if (teams.length == 6) {
     close_search1();
     gen_teams(teams);
+    reset_game();
   }
 }
 
@@ -43876,6 +43881,35 @@ function gen_teams(teamlist) {
   document.getElementById("tn6").innerHTML = teamlist[5];
   teams = [];
   count = 0;
+}
+
+function reset_game() {
+  document.getElementById("topleft").innerHTML = "Click to Enter Player";
+  document.getElementById("topleft").style.backgroundColor = "transparent";
+  document.getElementById("topmiddle").innerHTML = "Click to Enter Player";
+  document.getElementById("topmiddle").style.backgroundColor = "transparent";
+  document.getElementById("topright").innerHTML = "Click to Enter Player";
+  document.getElementById("topright").style.backgroundColor = "transparent";
+  document.getElementById("middleleft").innerHTML = "Click to Enter Player";
+  document.getElementById("middleleft").style.backgroundColor = "transparent";
+  document.getElementById("middlemiddle").innerHTML = "Click to Enter Player";
+  document.getElementById("middlemiddle").style.backgroundColor = "transparent";
+  document.getElementById("middleright").innerHTML = "Click to Enter Player";
+  document.getElementById("middleright").style.backgroundColor = "transparent";
+  document.getElementById("bottomleft").innerHTML = "Click to Enter Player";
+  document.getElementById("bottomleft").style.backgroundColor = "transparent";
+  document.getElementById("bottommiddle").innerHTML = "Click to Enter Player";
+  document.getElementById("bottommiddle").style.backgroundColor = "transparent";
+  document.getElementById("bottomright").innerHTML = "Click to Enter Player";
+  document.getElementById("bottomright").style.backgroundColor = "transparent";
+}
+
+function restart_game() {
+  document.querySelector(".wrapper2").style.visibility = "visible";
+  document.querySelector(".gameOver").style.visibility = "hidden";
+  document.getElementById("tn9").innerHTML = "9";
+  guesses = 9;
+  reset_game();
 }
 
 // for (let [key, value] of Object.entries(playerDB)) {
