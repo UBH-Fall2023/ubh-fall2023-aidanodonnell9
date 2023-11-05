@@ -43883,8 +43883,18 @@ function analyze_selection(name, id) {
           .querySelector(".gameOver")
           .querySelector(".game-over").innerHTML = "You Know Ball!";
         // document.querySelector(".gameOver").style.visibility = "visible";
+      } else {
+        document
+          .querySelector(".gameOver")
+          .querySelector(".game-over").style.color = "red";
+        document.querySelector(".gameOver").style.border = "3px solid red";
+        document
+          .querySelector(".gameOver")
+          .querySelector(".game-over").innerHTML =
+          "Game Over, You Don't Know Ball!";
       }
       document.querySelector(".gameOver").style.visibility = "visible";
+      correct = 0;
     }
 
     if (unlimited_guesses == false) {
@@ -43956,6 +43966,12 @@ function gen_teams(teamlist) {
 }
 
 function reset_game() {
+  document.querySelector(".gameOver").querySelector(".game-over").style.color =
+    "red";
+  document.querySelector(".gameOver").style.border = "3px solid red";
+  document.querySelector(".gameOver").querySelector(".game-over").innerHTML =
+    "Game Over, You Don't Know Ball!";
+  correct = 0;
   unlimited_guesses = false;
   player_guessed = [];
   document.getElementById("topleft").innerHTML = "Click to Enter Player";
@@ -43983,5 +43999,6 @@ function restart_game() {
   document.querySelector(".gameOver").style.visibility = "hidden";
   document.getElementById("tn9").innerHTML = "9";
   guesses = 9;
+  correct = 0;
   reset_game();
 }
