@@ -107,6 +107,6 @@ def team_names():
 #         print[NBAPlayer_Dict]
 
 
-# backend_parse_NBAPlayers()
-print(team_parse_NBAPlayers())
-team_names()
+backend_parse_NBAPlayers()
+# print(team_parse_NBAPlayers())
+# team_names()

@@ -43649,6 +43649,7 @@ let selected_button_id = "";
 let first_team_id = "";
 let second_team_id = "";
 let unlimited_guesses = false;
+let wrong_answer = false;
 let guesses = 9;
 
 function demo_teams() {
@@ -43865,15 +43866,21 @@ function analyze_selection(name, id) {
       document.getElementById(selected_button_id).style.backgroundColor =
         "green";
       correct += 1;
+      if (guesses < 9) {
+        guesses += 1;
+        document.getElementById("tn9").innerHTML = guesses;
+      }
     } else {
+      wrong_answer = true;
       close_search();
     }
 
-    if (guesses > 0 && unlimited_guesses == false) {
+    if (guesses > 0 && unlimited_guesses == false && wrong_answer == true) {
       guesses -= 1;
+      wrong_answer = false;
     }
 
-    if (guesses == 0) {
+    if (guesses == 0 || correct == 9) {
       if (correct == 9) {
         document
           .querySelector(".gameOver")
@@ -43973,6 +43980,7 @@ function reset_game() {
     "Game Over, You Don't Know Ball!";
   correct = 0;
   unlimited_guesses = false;
+  wrong_answer = false;
   player_guessed = [];
   document.getElementById("topleft").innerHTML = "Click to Enter Player";
   document.getElementById("topleft").style.backgroundColor = "transparent";
@@ -44000,5 +44008,6 @@ function restart_game() {
   document.getElementById("tn9").innerHTML = "9";
   guesses = 9;
   correct = 0;
+  wrong_answer = false;
   reset_game();
 }
