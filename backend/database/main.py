@@ -40,7 +40,7 @@ def update_teams(team: str):
 def backend_parse_NBAPlayers():
     NBAPlayer_Dict: dict[(str, str, int), (list[str], list[str])] = {}
     same_key_found = False
-    with open("Player Per Game.csv", "r") as file:
+    with open("backend/database/Player Per Game.csv", "r") as file:
         csvFile = csv.reader(file)
         next(csvFile)
         for lines in csvFile:
@@ -70,7 +70,7 @@ def backend_parse_NBAPlayers():
 def team_parse_NBAPlayers():
     adict = {}
     same_key_found = False
-    with open("Team Abbrev.csv", "r") as file:
+    with open("backend/database/Team Abbrev.csv", "r") as file:
         csvFile = csv.reader(file)
         next(csvFile)
         for lines in csvFile:
@@ -81,7 +81,7 @@ def team_parse_NBAPlayers():
 
 def team_names():
     teamDict: dict[str, str] = {}
-    with open("Team Abbrev.csv") as file:
+    with open("backend/database/Team Abbrev.csv") as file:
         csvFile = csv.reader(file)
         next(csvFile)
         for lines in csvFile:
