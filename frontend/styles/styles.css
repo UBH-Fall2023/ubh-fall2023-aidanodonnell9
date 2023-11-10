@@ -570,6 +570,7 @@
     button.input:hover {
         font-family: NBA;
         text-shadow: -0.5px -0.5px 0 #fff, 0.5px -0.5px 0 #fff, -.5px .5px 0 #fff, 0.5px 0.5px 0 #fff;
+        cursor: pointer;
 
         color: #005bbb;
         border: 5px solid #005bbb;
@@ -700,26 +701,32 @@
     }
 
     button.newteam:hover {
+        cursor: pointer;
         scale: 1.1;
     }
 
     button.unlimited:hover {
+        cursor: pointer;
         scale: 1.1;
     }
 
     button.harry:hover {
+        cursor: pointer;
         scale: 1.1;
     }
 
     button.sty:hover {
+        cursor: pointer;
         scale: 1.1;
     }
 
     button.sty1:hover {
+        cursor: pointer;
         scale: 1.1;
     }
 
     button.sty2:hover {
+        cursor: pointer;
         scale: 1.1;
     }
 

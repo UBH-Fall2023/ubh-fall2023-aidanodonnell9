@@ -43680,7 +43680,7 @@ function open_search(element_id, first_team_search, second_team_search) {
     let searchedVal = search_input.value.toLowerCase().replace(/'/g, "`");
     arr = Object.keys(player_names)
       .filter((data) => {
-        return data.toLowerCase().startsWith(searchedVal);
+        return data.toLowerCase().includes(searchedVal);
       })
       .map(
         (data) => ` <li>
