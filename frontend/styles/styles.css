@@ -57,6 +57,7 @@
     }
 
     .options li {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
         position: relative;
         max-height: 50px;
         padding: 0 13px;
@@ -279,6 +280,7 @@
     }
 
     button.random {
+        cursor: pointer;
         position: relative;
         left: 365px;
         font-family: NBA;
@@ -351,16 +353,26 @@
     }
 
     button.close {
+        cursor: pointer;
+        border: none;
+        outline: none;
         z-index: 10;
         color: white;
-        position: fixed;
-        left: 1100px;
-        bottom: 550px;
+        position: relative;
+        left: 1110px;
+        bottom: 15px;
         background: red;
         border-color: #666666;
         border-radius: 25px;
         height: 40px;
         width: 40px;
+    }
+
+    button.close:hover {
+        border: 1px solid black;
+        color: black;
+        background: white;
+
     }
 
     button.prompt {
@@ -386,6 +398,7 @@
     }
 
     .teamname {
+        cursor: pointer;
         z-index: 7;
         text-align: center;
         font-family: NBA;
@@ -493,10 +506,12 @@
     }
 
     .options h5 {
-        font-size: 15pt;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 10pt;
     }
 
     .options h6 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
         color: rgb(95, 95, 95);
         position: relative;
         top: 0px;
